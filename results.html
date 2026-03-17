@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Excel file upload</title>
+    <!-- external CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/results.css">
+</head>
+<body>
+    
+    <div class="home-container">
+        <div id="left">
+            <div class="text-group">
+                <div class="title">PREDICTED SCORE</div>
+            </div>
+            <div class="text-score" id="score-display">
+                0 / 180
+            </div>
+            <div class="again-btn" id="predict-again" onclick="window.location.href='index.html'">
+                INPUT ANOTHER
+            </div>
+        </div>
+
+        <div id="right">
+            <div class="subject-cards">
+                <div class="subject-card" id="math-card">
+                    <div class="subject-name">MATH</div>
+                    <div class="subject-score" id="math-score">0 / 40</div>
+                </div>
+                <div class="subject-card" id="english-card">
+                    <div class="subject-name">ENGLISH</div>
+                    <div class="subject-score" id="english-score">0 / 80</div>
+                </div>
+                <div class="subject-card" id="science-card">
+                    <div class="subject-name">SCIENCE</div>
+                    <div class="subject-score" id="science-score">0 / 30</div>
+                </div>
+                <div class="subject-card" id="aptitude-card">
+                    <div class="subject-name">APTITUDE</div>
+                    <div class="subject-score" id="aptitude-score">0 / 30</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

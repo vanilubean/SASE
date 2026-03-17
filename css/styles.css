@@ -1,0 +1,193 @@
+/* styles.css - clean, minimal styling for upload page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+body {
+    display: flex; flex-direction: column;
+    background: linear-gradient(145deg, #f6f9fc 0%, #e9f2f9 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.title { font-size: 40px;}
+
+.upload-container {
+    background: #640808e6;
+    backdrop-filter: blur(4px);
+    max-width: 550px;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    border-radius: 32px;
+    box-shadow: 0 20px 40px -10px rgba(0, 40, 80, 0.25),
+                0 8px 20px rgba(0, 20, 40, 0.1);
+    border: 1px solid rgba(255,255,255,0.6);
+    transition: transform 0.2s ease;
+}
+
+.upload-container:hover {
+    transform: scale(1.01);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a3e50;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.subtitle {
+    color: #2c5775;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    border-left: 3px solid #4a9eff;
+    padding-left: 1rem;
+    background: #e3f0fd60;
+    border-radius: 0 12px 12px 0;
+    line-height: 1.4;
+}
+
+.subtitle code {
+    background: #1e4055;
+    color: #d4edff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 24px;
+    font-size: 0.8rem;
+}
+
+.file-input-wrapper {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.custom-file-label {
+    display: inline-block;
+    background: #ffffff;
+    border: 2px solid #cbdbe9;
+    padding: 0.8rem 2rem;
+    border-radius: 60px;
+    font-weight: 500;
+    color: #1e3f58;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 6px rgba(0,40,70,0.08);
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.custom-file-label:hover {
+    background: #e1efff;
+    border-color: #7fb0e0;
+}
+
+input[type="file"] {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+}
+
+.file-name {
+    font-size: 0.9rem;
+    color: #2b5c7c;
+    margin: 0.2rem 0 1.2rem 0.5rem;
+    min-height: 1.8rem;
+    font-style: italic;
+}
+
+.upload-btn {
+    background: #1f5f8f;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 60px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+    letter-spacing: 0.3px;
+    box-shadow: 0 8px 20px -6px #1f5f8f80;
+    border: 1px solid #ffffff50;
+    margin-top: 0.5rem;
+}
+
+.upload-btn:hover {
+    background: #0a4a77;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -6px #1f5f8f;
+}
+
+.upload-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 12px -4px #1f5f8f;
+}
+
+.result-area {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border-radius: 24px;
+    background: #ffffffd0;
+    border: 1px solid #bdd3e8;
+    box-shadow: inset 0 2px 6px #00000008, 0 8px 18px -12px #204b6e;
+    transition: all 0.3s;
+}
+
+.result-area h3 {
+    font-size: 1.2rem;
+    color: #13425e;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#statusMessage {
+    font-weight: 500;
+    color: #15507b;
+    margin-bottom: 0.8rem;
+    background: #e4f0fa;
+    padding: 0.6rem 1rem;
+    border-radius: 40px;
+    display: inline-block;
+}
+
+#fileDetails {
+    background: #f0f6fe;
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #113955;
+    white-space: pre-wrap;
+    word-break: break-word;
+    border: 1px solid #bed9f0;
+    font-family: 'Fira Code', monospace;
+}
+
+.hidden {
+    display: none;
+}
+
+/* small extra polish */
+.file-input-wrapper + .file-name {
+    padding-left: 0.5rem;
+}
+
+@media (max-width: 450px) {
+    .upload-container {
+        padding: 1.8rem 1.2rem;
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,58 @@
+#right .subject-cards {
+    flex: 1;
+    display: flex; flex-direction: column;
+    gap: 40px;
+}
+#right .subject-card {
+    flex: 1;
+
+    padding: 16px;
+    background-color: #171a1f;
+
+    text-align:  center;
+    align-content: center;
+
+    color: #e4e3e2;
+    font-family: 'Inter-Black';
+    font-size: 32px; letter-spacing: 4px;
+
+    transition: ease .4s;
+    white-space: nowrap;
+}
+#right .subject-card:hover {
+    transform: translateX(-16px);
+    background-color: #0d0f13;
+
+    color: #b9b8b8;
+}
+/* SCORE ----------------------------------------------------------------------------- */
+.text-score {
+    font-size: 72px;
+    font-family: 'Inter-Black', sans-serif;
+    color: #171a1f;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    animation: glow 2s ease-out;
+}
+
+.again-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #171a1f;
+    color: #e4e3e2;
+    font-family: 'Inter-Black', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.again-btn:hover {
+    background-color: #0d0f13;
+    padding-inline: 40px;
+    color: #b9b8b8;
+}

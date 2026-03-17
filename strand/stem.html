@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Excel file upload</title>
+    <!-- external CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link rel="stylesheet" href="/css/strand.css">
+</head>
+<body>
+    
+    <div class="strand-container">
+        <div id="header-label">
+            <div class="title">ENTER TRANSCRIPT OF RECORDS</div>
+            <hr>
+            <div class="subtitle-container">
+                <div class="subtitle">GRADE 11</div>
+                <div class="semester-toggle">
+                    <button class="toggle-btn active" data-sem="1st">1st Sem</button>
+                    <button class="toggle-btn" data-sem="2nd">2nd Sem</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="table">
+            <!-- GRADE 11 TABLE -->
+           <table class="grades-table" id="grade11-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Description</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="sem-1">
+                        <td>English 001</td>
+                        <td>Oral Communication in Context</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-1">
+                        <td>Filipino 001</td>
+                        <td>Komunikasyon at Pananaliksik sa Wika at Kulturang Pilipino</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-1">
+                        <td>HOPE 1</td>
+                        <td>Health Optimizing Physical Education 1</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-1">
+                        <td>Humanities 001</td>
+                        <td>Introduction to Philosophy of the Human Person</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-1">
+                        <td>Mathematics 001</td>
+                        <td>General Mathematics</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>STEM AS-011</td>
+                        <td>English for Academic and Professional Purposes</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>PRE</td>
+                        <td>Pre-Calculus</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>Science 001</td>
+                        <td>Earth and Life Science</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>Social Science 001</td>
+                        <td>Personal Development / Pag-unlad sa Sarili</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>Values and Self</td>
+                        <td>Values Education / Edukasyon sa Pagpapakatao</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- GRADE 12 TABLE -->
+            <table class="grades-table" id="grade12-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Description</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="sem-1">
+                        <td>Comm 001</td>
+                        <td>Media and Information Literacy</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-1">
+                        <td>PEH 3</td>
+                        <td>Physical Education and Health</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-1">
+                        <td>DRRR</td>
+                        <td>Disaster Readiness and Risk Reduction</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-1">
+                        <td>Social Science 002</td>
+                        <td>Understanding Culture, Soiety, and Politics</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-1">
+                        <td>STEM AS-013</td>
+                        <td>Research in Daily Life</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>STEM AS-014</td>
+                        <td>Pagsusulat sa Filipino sa Piling Laragan (Akademik)</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>STEM AS-023</td>
+                        <td>General Biology</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>STEM AS-025</td>
+                        <td>General Physics 1</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>General Chemistry 2</td>
+                        <td>General Chemistry 2</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="sem-2" style="display: none;">
+                        <td>Values and Society</td>
+                        <td>Values and Society</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="0" max="100" step="0.01"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="next-btn" id="next-btn">
+            Next
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
