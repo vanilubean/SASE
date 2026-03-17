@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     window.location.href = '/SASE/strand/stem.html';
                     break;
                 case 'tvl':
-                    window.location.href = '/strand/tvl.html';
+                    window.location.href = '/SASE/strand/tvl.html';
                     break;
                 case 'humms':
-                    window.location.href = '/strand/humms.html';
+                    window.location.href = '/SASE/strand/humms.html';
                     break;
                 default:
                     console.log('Unknown strand:', strand);
