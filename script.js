@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Navigate to results page
-            window.location.href = '/../results.html';
+            window.location.href = '/SASE/results.html';
         }
     });
 
@@ -157,58 +157,58 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // SHOW PREDCITED SCORES ////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function() {
-            // Generate random scores within reasonable ranges
-            const scores = {
-                math: Math.floor(Math.random() * (35 - 15 + 1)) + 15,        // 15-35 out of 40
-                english: Math.floor(Math.random() * (70 - 40 + 1)) + 40,     // 40-70 out of 80
-                science: Math.floor(Math.random() * (25 - 10 + 1)) + 10,     // 10-25 out of 30
-                aptitude: Math.floor(Math.random() * (25 - 10 + 1)) + 10     // 10-25 out of 30
-            };
-            
-            // Calculate total score
-            const totalScore = scores.math + scores.english + scores.science + scores.aptitude;
-            
-            // Get all display elements
-            const scoreDisplay = document.getElementById('score-display');
-            const mathScore = document.getElementById('math-score');
-            const englishScore = document.getElementById('english-score');
-            const scienceScore = document.getElementById('science-score');
-            const aptitudeScore = document.getElementById('aptitude-score');
-            
-            // Animation duration in milliseconds
-            const duration = 2500;
-            const startTime = performance.now();
-            
-            // Easing function for smooth animation
-            function easeOutQuart(x) {
-                return 1 - Math.pow(1 - x, 4);
-            }
-            
-            function animateScores(currentTime) {
-                const elapsedTime = currentTime - startTime;
-                const progress = Math.min(elapsedTime / duration, 1);
-                const easedProgress = easeOutQuart(progress);
-                
-                // Update each subject score
-                mathScore.textContent = `${Math.round(scores.math * easedProgress)} / 40`;
-                englishScore.textContent = `${Math.round(scores.english * easedProgress)} / 80`;
-                scienceScore.textContent = `${Math.round(scores.science * easedProgress)} / 30`;
-                aptitudeScore.textContent = `${Math.round(scores.aptitude * easedProgress)} / 30`;
-                
-                // Update total score
-                const currentTotal = Math.round(totalScore * easedProgress);
-                scoreDisplay.textContent = `${currentTotal} / 180`;
-                
-                if (progress < 1) {
-                    requestAnimationFrame(animateScores);
-                }
-            }
-            
-            // Start animation
+    // Generate random scores within reasonable ranges
+    const scores = {
+        math: Math.floor(Math.random() * (35 - 15 + 1)) + 15,        // 15-35 out of 40
+        english: Math.floor(Math.random() * (70 - 40 + 1)) + 40,     // 40-70 out of 80
+        science: Math.floor(Math.random() * (25 - 10 + 1)) + 10,     // 10-25 out of 30
+        aptitude: Math.floor(Math.random() * (25 - 10 + 1)) + 10     // 10-25 out of 30
+    };
+    
+    // Calculate total score
+    const totalScore = scores.math + scores.english + scores.science + scores.aptitude;
+    
+    // Get all display elements
+    const scoreDisplay = document.getElementById('score-display');
+    const mathScore = document.getElementById('math-score');
+    const englishScore = document.getElementById('english-score');
+    const scienceScore = document.getElementById('science-score');
+    const aptitudeScore = document.getElementById('aptitude-score');
+    
+    // Animation duration in milliseconds
+    const duration = 2500;
+    const startTime = performance.now();
+    
+    // Easing function for smooth animation
+    function easeOutQuart(x) {
+        return 1 - Math.pow(1 - x, 4);
+    }
+    
+    function animateScores(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const easedProgress = easeOutQuart(progress);
+        
+        // Update each subject score
+        mathScore.textContent = `${Math.round(scores.math * easedProgress)} / 40`;
+        englishScore.textContent = `${Math.round(scores.english * easedProgress)} / 80`;
+        scienceScore.textContent = `${Math.round(scores.science * easedProgress)} / 30`;
+        aptitudeScore.textContent = `${Math.round(scores.aptitude * easedProgress)} / 30`;
+        
+        // Update total score
+        const currentTotal = Math.round(totalScore * easedProgress);
+        scoreDisplay.textContent = `${currentTotal} / 180`;
+        
+        if (progress < 1) {
             requestAnimationFrame(animateScores);
-            
-            // Add click handler for "INPUT ANOTHER" button
-            document.getElementById('predict-again').addEventListener('click', function() {
-                window.location.href = 'index.html';
-            });
-        });
+        }
+    }
+    
+    // Start animation
+    requestAnimationFrame(animateScores);
+    
+    // Add click handler for "INPUT ANOTHER" button
+    document.getElementById('predict-again').addEventListener('click', function() {
+        window.location.href = '/SASE/index.html';
+    });
+});
