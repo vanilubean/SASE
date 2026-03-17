@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Navigate to results page
-            window.location.href = '/SASE/results.html';
+            window.location.href = '/../results.html';
         }
     });
 
