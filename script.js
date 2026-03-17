@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Navigate to the corresponding HTML page
             switch(strand) {
                 case 'stem':
-                    window.location.href = '/strand/stem.html';
+                    window.location.href = '/../strand/stem.html';
                     break;
                 case 'tvl':
                     window.location.href = '/strand/tvl.html';
