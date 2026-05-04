@@ -37,55 +37,62 @@ document.addEventListener('DOMContentLoaded', function() {
     // State to track which grade is currently showing
     let isGrade11 = true;
 
-    // Function to update semester rows visibility for current table
-    function updateSemesterDisplay(semester) {
-        // Get the currently visible table's rows
+    // Function to update subject rows visibility for current table
+    function updateSubjectDisplay(subject) {
         const currentTable = isGrade11 ? grade11Table : grade12Table;
-        const sem1Rows = currentTable.querySelectorAll('.sem-1');
-        const sem2Rows = currentTable.querySelectorAll('.sem-2');
+        const coreRows = currentTable.querySelectorAll('.core');
+        const contRows = currentTable.querySelectorAll('.cont');
+        const specRows = currentTable.querySelectorAll('.spec');
         
-        if (semester === '1st') {
-            sem1Rows.forEach(row => row.style.display = '');
-            sem2Rows.forEach(row => row.style.display = 'none');
-        } else {
-            sem1Rows.forEach(row => row.style.display = 'none');
-            sem2Rows.forEach(row => row.style.display = '');
+        if      (subject === 'core') {
+            coreRows.forEach(row => row.style.display = '');
+            contRows.forEach(row => row.style.display = 'none');
+            specRows.forEach(row => row.style.display = 'none');
+        }
+        else if (subject === 'cont') {
+            coreRows.forEach(row => row.style.display = 'none');
+            contRows.forEach(row => row.style.display = '');
+            specRows.forEach(row => row.style.display = 'none');
+        }
+        else if (subject === 'spec') {
+            coreRows.forEach(row => row.style.display = 'none');
+            contRows.forEach(row => row.style.display = 'none');
+            specRows.forEach(row => row.style.display = '');
         }
     }
 
-    // Semester toggle click handlers
+    // Subject toggle click handlers
     toggleBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             // Remove active class from all buttons
             toggleBtns.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
             this.classList.add('active');
             
-            const semester = this.getAttribute('data-sem');
-            updateSemesterDisplay(semester);
+            const subject = this.getAttribute('data-sub');
+            updateSubjectDisplay(subject);
         });
     });
 
-    // Function to validate if all grade inputs in CURRENT table are filled
-    function validateCurrentTableGrades() {
-        // Only validate the currently visible table
+    // Function to get visible inputs in the current table
+    function getVisibleInputsInCurrentTable() {
         const currentTable = isGrade11 ? grade11Table : grade12Table;
-        
-        // Only get inputs from visible rows in the current table
-        const visibleRows = currentTable.querySelectorAll('tbody tr[style="display: none;"]');
+        const allInputsInCurrentTable = currentTable.querySelectorAll('.grade-input');
         const visibleInputs = [];
         
-        // Get all inputs in the current table
-        const allInputsInCurrentTable = currentTable.querySelectorAll('.grade-input');
-        
-        // Filter to only include inputs in visible rows
         allInputsInCurrentTable.forEach(input => {
             const row = input.closest('tr');
             // Check if the row is visible (not display: none)
-            if (row.style.display !== 'none') {
+            if (row && row.style.display !== 'none') {
                 visibleInputs.push(input);
             }
         });
+        
+        return visibleInputs;
+    }
+
+    // Function to validate if all grade inputs in CURRENT table are filled
+    function validateCurrentTableGrades() {
+        const visibleInputs = getVisibleInputsInCurrentTable();
         
         let allFilled = true;
         let firstEmpty = null;
@@ -98,6 +105,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 allFilled = false;
                 input.style.borderColor = 'red';
                 if (!firstEmpty) firstEmpty = input;
+            } else {
+                // Optional: validate numeric range
+                const val = parseFloat(input.value);
+                const min = parseFloat(input.min) || 0;
+                const max = parseFloat(input.max) || 100;
+                if (isNaN(val) || val < min || val > max) {
+                    allFilled = false;
+                    input.style.borderColor = 'red';
+                    if (!firstEmpty) firstEmpty = input;
+                }
             }
         });
         
@@ -124,9 +141,14 @@ document.addEventListener('DOMContentLoaded', function() {
             gradeLevel.textContent = 'GRADE 12';
             this.textContent = 'PROCEED TO RESULTS';
             
-            // Reset to 1st semester view for Grade 12
-            const firstSemBtn = document.querySelector('[data-sem="1st"]');
-            firstSemBtn.click();
+            // Reset to core subjects for Grade 12
+            const coreBtn = document.querySelector('[data-sub="core"]');
+            if (coreBtn) {
+                coreBtn.click();
+            } else {
+                // Fallback: manually update to core
+                updateSubjectDisplay('core');
+            }
             
             isGrade11 = false;
         } else {
@@ -141,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add real-time validation styling
+    // Add real-time validation styling and store grades
     const allInputs = document.querySelectorAll('.grade-input');
     allInputs.forEach(input => {
         input.addEventListener('input', function() {
@@ -151,64 +173,75 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Initialize first semester view
-    updateSemesterDisplay('1st');
+    // Initialize with core subjects visible
+    updateSubjectDisplay('core');
+    // Set active class on core button
+    const coreBtn = document.querySelector('[data-sub="core"]');
+    if (coreBtn) {
+        coreBtn.classList.add('active');
+    }
 });
 
-// SHOW PREDCITED SCORES ////////////////////////////////////
-document.addEventListener('DOMContentLoaded', function() {
-            // Generate random scores within reasonable ranges
-            const scores = {
-                math: Math.floor(Math.random() * (35 - 15 + 1)) + 15,        // 15-35 out of 40
-                english: Math.floor(Math.random() * (70 - 40 + 1)) + 40,     // 40-70 out of 80
-                science: Math.floor(Math.random() * (25 - 10 + 1)) + 10,     // 10-25 out of 30
-                aptitude: Math.floor(Math.random() * (25 - 10 + 1)) + 10     // 10-25 out of 30
-            };
+// SHOW PREDICTED SCORES ////////////////////////////////////
+// This script is for results.html page
+if (document.getElementById('score-display')) {
+    document.addEventListener('DOMContentLoaded', function() {
+        // Generate random scores within reasonable ranges
+        const scores = {
+            math: Math.floor(Math.random() * (35 - 15 + 1)) + 15,        // 15-35 out of 40
+            english: Math.floor(Math.random() * (70 - 40 + 1)) + 40,     // 40-70 out of 80
+            science: Math.floor(Math.random() * (25 - 10 + 1)) + 10,     // 10-25 out of 30
+            aptitude: Math.floor(Math.random() * (25 - 10 + 1)) + 10     // 10-25 out of 30
+        };
+        
+        // Calculate total score
+        const totalScore = scores.math + scores.english + scores.science + scores.aptitude;
+        
+        // Get all display elements
+        const scoreDisplay = document.getElementById('score-display');
+        const mathScore = document.getElementById('math-score');
+        const englishScore = document.getElementById('english-score');
+        const scienceScore = document.getElementById('science-score');
+        const aptitudeScore = document.getElementById('aptitude-score');
+        
+        // Animation duration in milliseconds
+        const duration = 2500;
+        const startTime = performance.now();
+        
+        // Easing function for smooth animation
+        function easeOutQuart(x) {
+            return 1 - Math.pow(1 - x, 4);
+        }
+        
+        function animateScores(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const easedProgress = easeOutQuart(progress);
             
-            // Calculate total score
-            const totalScore = scores.math + scores.english + scores.science + scores.aptitude;
+            // Update each subject score
+            mathScore.textContent = `${Math.round(scores.math * easedProgress)} / 40`;
+            englishScore.textContent = `${Math.round(scores.english * easedProgress)} / 80`;
+            scienceScore.textContent = `${Math.round(scores.science * easedProgress)} / 30`;
+            aptitudeScore.textContent = `${Math.round(scores.aptitude * easedProgress)} / 30`;
             
-            // Get all display elements
-            const scoreDisplay = document.getElementById('score-display');
-            const mathScore = document.getElementById('math-score');
-            const englishScore = document.getElementById('english-score');
-            const scienceScore = document.getElementById('science-score');
-            const aptitudeScore = document.getElementById('aptitude-score');
+            // Update total score
+            const currentTotal = Math.round(totalScore * easedProgress);
+            scoreDisplay.textContent = `${currentTotal} / 180`;
             
-            // Animation duration in milliseconds
-            const duration = 2500;
-            const startTime = performance.now();
-            
-            // Easing function for smooth animation
-            function easeOutQuart(x) {
-                return 1 - Math.pow(1 - x, 4);
+            if (progress < 1) {
+                requestAnimationFrame(animateScores);
             }
-            
-            function animateScores(currentTime) {
-                const elapsedTime = currentTime - startTime;
-                const progress = Math.min(elapsedTime / duration, 1);
-                const easedProgress = easeOutQuart(progress);
-                
-                // Update each subject score
-                mathScore.textContent = `${Math.round(scores.math * easedProgress)} / 40`;
-                englishScore.textContent = `${Math.round(scores.english * easedProgress)} / 80`;
-                scienceScore.textContent = `${Math.round(scores.science * easedProgress)} / 30`;
-                aptitudeScore.textContent = `${Math.round(scores.aptitude * easedProgress)} / 30`;
-                
-                // Update total score
-                const currentTotal = Math.round(totalScore * easedProgress);
-                scoreDisplay.textContent = `${currentTotal} / 180`;
-                
-                if (progress < 1) {
-                    requestAnimationFrame(animateScores);
-                }
-            }
-            
-            // Start animation
-            requestAnimationFrame(animateScores);
-            
-            // Add click handler for "INPUT ANOTHER" button
-            document.getElementById('predict-again').addEventListener('click', function() {
+        }
+        
+        // Start animation
+        requestAnimationFrame(animateScores);
+        
+        // Add click handler for "INPUT ANOTHER" button
+        const predictAgainBtn = document.getElementById('predict-again');
+        if (predictAgainBtn) {
+            predictAgainBtn.addEventListener('click', function() {
                 window.location.href = 'index.html';
             });
-        });
+        }
+    });
+}
