@@ -5,9 +5,7 @@ body {
     height: 100vh;
     background-color: #e4e3e2;
 }
-body::-webkit-scrollbar {
-    display: none;
-}
+body::-webkit-scrollbar { display: none; }
 /* CONTAINER ------------------------------------------------------------------------- */
 .home-container {
     height: 100vh;
@@ -25,7 +23,7 @@ body::-webkit-scrollbar {
     justify-content: space-between;
 }
 #left .text-group {
-    display: flex; flex-direction: column;
+    display: flex; flex-direction: column; gap: 8px;
 }
 .title {
     color: #171a1f;
@@ -34,12 +32,14 @@ body::-webkit-scrollbar {
     letter-spacing: 4px; line-height: 80px;
 }
 .subtitle {
-    font-family: 'Inter-Bold';
+    color: #4c5158;
+    font-family: 'SSP-SemiBold';
     font-size: 40px;
     line-height: 40px; letter-spacing: 2px;
 }
 #left .text {
-    font-family: 'Inter-Medium';
+    color: #4c5158;
+    font-family: 'SSP-Regular';
     font-size: 24px;
 }
 /* RIGHT ----------------------------------------------------------------------------- */
@@ -50,7 +50,7 @@ body::-webkit-scrollbar {
 #right .strand-btns {
     flex: 1;
     display: flex; flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 #right .strand-btn {
     flex: 1;
