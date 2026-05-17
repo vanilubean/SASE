@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/strand.css">
+    <title>ABM</title>
+</head>
+<body>
+    
+    <div class="strand-container">
+        <div id="header-label">
+            <div class="title">ENTER TRANSCRIPT OF RECORDS</div>
+            <hr>
+            <div class="subtitle-container">
+                <div class="subtitle">SENIOR HIGH</div>
+            </div>
+        </div>
+
+        <!-- Toggle buttons -->
+        <div class="subject-toggle">
+            <button class="toggle-btn active" data-sub="core">Core</button>
+            <button class="toggle-btn" data-sub="cont">Contextualized</button>
+            <button class="toggle-btn" data-sub="spec">Specialized</button>
+        </div>
+
+        <div id="table">
+            <table class="grades-table" id="grades-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- CORE SUBJECTS -->
+                    <tr class="core">
+                        <td>21st Century Literature from the Philippines and the World</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="core">
+                        <td>Earth and Life Science</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="core">
+                        <td>Empowerment Technologies</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="core">
+                        <td>General Mathematics</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="core">
+                        <td>Oral Communication in Context</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="core">
+                        <td>Media and Information Literacy</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="core">
+                        <td>Statistics and Probability</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    
+                    <!-- CONTEXTUALIZED SUBJECTS -->
+                    <tr class="cont" style="display: none;">
+                        <td>English for Academic and Professional Purposes</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="cont" style="display: none;">
+                        <td>Practical Research 1</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="cont" style="display: none;">
+                        <td>Practical Research 2</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="cont" style="display: none;">
+                        <td>Reading and Writing Skills</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    
+                    <!-- SPECIALIZED SUBJECTS -->
+                    <tr class="spec" style="display: none;">
+                        <td>Business Finance</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="spec" style="display: none;">
+                        <td>Business Math</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="spec" style="display: none;">
+                        <td>Fundamentals of ABM 1</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                    <tr class="spec" style="display: none;">
+                        <td>Fundamentals of ABM 1</td>
+                        <td><input type="number" class="grade-input" placeholder="Enter grade" min="75" max="100" step="0.01"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="next-btn" id="next-btn">
+            Next
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
