@@ -140,7 +140,6 @@ function predictSASEScience(grade) {
 function predictSASEAptitude(grade) {
     return 12;  // Fixed baseline from your data
 }
-
 // ============================================
 // AI MODEL (Full: Math, Language, Science)
 // ============================================
