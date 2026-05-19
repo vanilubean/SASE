@@ -177,21 +177,11 @@ async function loadAIModel() {
 
 function predictWithAI(subjectType, grades) {
     if (!saseAI) {
-        // Fallback to rule-based
-        if (subjectType === 'math') return predictSASEMath(grades['General Mathematics'] || 85);
-        if (subjectType === 'language') return predictSASELanguage(grades['Oral Communication in Context'] || 85);
-        if (subjectType === 'science') return predictSASEScience(grades['Earth and Life Science'] || 85);
-        return 12;
+        return predictFallback(subjectType, grades);
     }
     
     const model = saseAI[subjectType];
-    if (!model) {
-        // Fallback if this subject type isn't in the model
-        if (subjectType === 'math') return predictSASEMath(grades['General Mathematics'] || 85);
-        if (subjectType === 'language') return predictSASELanguage(grades['Oral Communication in Context'] || 85);
-        if (subjectType === 'science') return predictSASEScience(grades['Earth and Life Science'] || 85);
-        return 12;
-    }
+    if (!model) return predictFallback(subjectType, grades);
     
     let prediction = model.baseline;
     
