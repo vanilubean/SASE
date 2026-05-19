@@ -23,7 +23,11 @@
     ],
     "baseline": 12.64,
     "max_score": 40,
-    "min_score": 0
+    "min_score": 0,
+    "predicted_range": [
+      6.423333333333334,
+      19.16
+    ]
   },
   "language": {
     "features": [
@@ -52,7 +56,11 @@
     ],
     "baseline": 51.12,
     "max_score": 80,
-    "min_score": 0
+    "min_score": 0,
+    "predicted_range": [
+      46.84,
+      61.62
+    ]
   },
   "science": {
     "features": [
@@ -87,13 +95,18 @@
     ],
     "baseline": 14.28,
     "max_score": 30,
-    "min_score": 0
+    "min_score": 0,
+    "predicted_range": [
+      10.42,
+      15.3
+    ]
   },
-  "version": "1.0",
+  "version": "2.0",
   "trained_on": 33,
   "r2_scores": {
     "math": 0.9401145019503646,
     "language": 0.8295754893872346,
     "science": 0.7613333693606723
-  }
+  },
+  "warning": "Language and Science models have low accuracy (negative R\u00b2 on test data). Use with caution."
 }
