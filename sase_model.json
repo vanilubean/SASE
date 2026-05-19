@@ -1,0 +1,99 @@
+{
+  "math": {
+    "features": [
+      "General Mathematics",
+      "Statistics and Probability",
+      "Basic Calculus",
+      "Pre Calculus",
+      "Business Math"
+    ],
+    "importance": [
+      0.15074118701231962,
+      0.26871200637944287,
+      0.4578577270417864,
+      0.09949842383003288,
+      0.023190655736418275
+    ],
+    "adjustments": [
+      0.06799999999999998,
+      0.29399999999999993,
+      0.258,
+      0.029999999999999895,
+      -0.24400000000000013
+    ],
+    "baseline": 12.64,
+    "max_score": 40,
+    "min_score": 0
+  },
+  "language": {
+    "features": [
+      "21st Century Literature from the Philippines and the World",
+      "Oral Communication in Context",
+      "Reading and Writing Skills",
+      "English for Academic Purposes",
+      "Creative Writing",
+      "Creative Non Fiction"
+    ],
+    "importance": [
+      0.20736057730310245,
+      0.18631907785136956,
+      0.26253476497313627,
+      0.23674571286623008,
+      0.06142124775773139,
+      0.045618619248430324
+    ],
+    "adjustments": [
+      1.05,
+      0.022000000000000595,
+      0.23200000000000004,
+      -0.4640000000000001,
+      0.012000000000000455,
+      0.00800000000000054
+    ],
+    "baseline": 51.12,
+    "max_score": 80,
+    "min_score": 0
+  },
+  "science": {
+    "features": [
+      "Earth and Life Science",
+      "Physical Science",
+      "General Biology 1",
+      "General Biology 2",
+      "General Chemistry 1",
+      "General Chemistry 2",
+      "General Physics 1",
+      "General Physics 2"
+    ],
+    "importance": [
+      0.25887723728301126,
+      0.10620303581169392,
+      0.21213708201842585,
+      0.14559287386549263,
+      0.010246406548774673,
+      0.06770002999534222,
+      0.1648876752206292,
+      0.034355659256630304
+    ],
+    "adjustments": [
+      0.007290476190476269,
+      -0.242,
+      0.09800000000000005,
+      -0.009999999999999964,
+      -0.027999999999999935,
+      0.025999999999999978,
+      0.10200000000000013,
+      0.018000000000000148
+    ],
+    "baseline": 14.28,
+    "max_score": 30,
+    "min_score": 0
+  },
+  "version": "1.0",
+  "trained_on": 33,
+  "r2_scores": {
+    "math": 0.9401145019503646,
+    "language": 0.8295754893872346,
+    "science": 0.7613333693606723
+  }
+}
