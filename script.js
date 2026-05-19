@@ -130,7 +130,7 @@ function saveAllGrades() {
 }
 
 // ============================================
-// PREDICTION FUNCTIONS
+// RULE-BASED PREDICTION FUNCTIONS (Fallback)
 // ============================================
 function predictSASEMath(grade) {
     if (grade >= 90) return 38;
@@ -164,10 +164,55 @@ function predictSASEAptitude(grade) {
 }
 
 // ============================================
-// RESULTS PAGE - Display animated scores
+// AI MODEL (Only for Math - R² = 0.57)
 // ============================================
-function initResultsPage() {
+let saseAI = null;
+
+async function loadAIModel() {
+    try {
+        const response = await fetch('sase_model.json');
+        saseAI = await response.json();
+        console.log('✅ AI Math Model loaded!');
+        console.log(`📊 Trained on ${saseAI.trained_on || '32'} students`);
+        return true;
+    } catch (error) {
+        console.log('⚠️ AI model not found, using fallback for Math');
+        return false;
+    }
+}
+
+function predictMathWithAI(grades) {
+    if (!saseAI) {
+        // Fallback to rule-based
+        return predictSASEMath(grades['General Mathematics'] || 85);
+    }
+    
+    const model = saseAI.math;
+    if (!model) return predictSASEMath(grades['General Mathematics'] || 85);
+    
+    let prediction = model.baseline;
+    
+    for (let i = 0; i < model.features.length; i++) {
+        const subject = model.features[i];
+        const grade = grades[subject] || 85;
+        
+        // Use adjustment if available, otherwise use importance
+        let adjustment = model.adjustments ? model.adjustments[i] : model.importance[i] * 0.5;
+        prediction += (grade - 85) * adjustment;
+    }
+    
+    // Clamp to valid Math score range (0-40)
+    return Math.min(40, Math.max(0, Math.round(prediction)));
+}
+
+// ============================================
+// RESULTS PAGE - Display animated scores (UPDATED)
+// ============================================
+async function initResultsPage() {
     if (!document.getElementById('score-display')) return;
+    
+    // Load AI model first
+    await loadAIModel();
     
     const savedGrades = JSON.parse(localStorage.getItem('studentGrades') || '{}');
     const strand = localStorage.getItem('studentStrand') || 'STEM';
@@ -181,14 +226,27 @@ function initResultsPage() {
     const scienceGrade = savedGrades['Earth and Life Science'] || 
                         savedGrades['General Biology 1'] || 85;
     
+    // UPDATED: Use AI for Math, rules for Language and Science
     const scores = {
-        math: predictSASEMath(mathGrade),
-        english: predictSASELanguage(englishGrade),
-        science: predictSASEScience(scienceGrade),
-        aptitude: predictSASEAptitude(mathGrade)
+        math: predictMathWithAI(savedGrades),           // AI-powered (R² = 0.57)
+        english: predictSASELanguage(englishGrade),     // Rule-based
+        science: predictSASEScience(scienceGrade),      // Rule-based
+        aptitude: predictSASEAptitude(mathGrade)        // Rule-based
     };
     
     const totalScore = scores.math + scores.english + scores.science + scores.aptitude;
+    
+    // Update AI status display if element exists
+    const aiStatusElem = document.getElementById('aiStatus');
+    if (aiStatusElem) {
+        if (saseAI) {
+            aiStatusElem.innerHTML = `✅ Math: AI Model (R² = 0.57) | Lang/Sci: Rule-based`;
+            aiStatusElem.style.color = 'green';
+        } else {
+            aiStatusElem.innerHTML = `⚠️ Using rule-based predictions (AI model not loaded)`;
+            aiStatusElem.style.color = 'orange';
+        }
+    }
     
     const mathScore = document.getElementById('math-score');
     const englishScore = document.getElementById('english-score');
