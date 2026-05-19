@@ -39,40 +39,26 @@ function initToggleButtons() {
         return;
     }
     
-    console.log('Toggle buttons found:', toggleBtns.length);
-    console.log('Grades table found:', gradesTable);
-    
     function updateSubjectDisplay(subject) {
         const allRows = gradesTable.querySelectorAll('tbody tr');
-        console.log('Total rows:', allRows.length);
-        console.log('Showing subject:', subject);
-        
         allRows.forEach(row => {
             if (row.classList.contains(subject)) {
                 row.style.display = 'table-row';
-                console.log('Showing row:', row.querySelector('td:first-child')?.textContent);
             } else {
                 row.style.display = 'none';
             }
         });
     }
     
-    // Add click handlers to toggle buttons
     toggleBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            console.log('Button clicked:', this.getAttribute('data-sub'));
-            
-            // Update active state
             toggleBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            
-            // Show the selected subject category
             const subject = this.getAttribute('data-sub');
             updateSubjectDisplay(subject);
         });
     });
     
-    // Initialize - show core subjects
     updateSubjectDisplay('core');
 }
 
@@ -108,7 +94,6 @@ function saveAllGrades() {
         }
     });
     
-    // Get strand from page
     let strand = 'STEM';
     const titleElem = document.querySelector('.title');
     if (titleElem) {
@@ -122,163 +107,12 @@ function saveAllGrades() {
     localStorage.setItem('studentGrades', JSON.stringify(grades));
     localStorage.setItem('studentStrand', strand);
     
-    console.log('Saved grades:', grades);
-    console.log('Strand:', strand);
-    
-    // Navigate to results
     window.location.href = '../results.html';
 }
 
 // ============================================
-// RULE-BASED PREDICTION FUNCTIONS (Fallback)
+// RULE-BASED PREDICTION FUNCTIONS (ACCURATE VERSION)
 // ============================================
-function predictSASEMath(grade) {
-    if (grade >= 90) return 38;
-    if (grade >= 85) return 32;
-    if (grade >= 80) return 26;
-    if (grade >= 75) return 20;
-    return 15;
-}
-
-function predictSASELanguage(grade) {
-    if (grade >= 90) return 72;
-    if (grade >= 85) return 62;
-    if (grade >= 80) return 52;
-    if (grade >= 75) return 42;
-    return 30;
-}
-
-function predictSASEScience(grade) {
-    if (grade >= 90) return 27;
-    if (grade >= 85) return 22;
-    if (grade >= 80) return 17;
-    if (grade >= 75) return 12;
-    return 8;
-}
-
-function predictSASEAptitude(grade) {
-    if (grade >= 90) return 22;
-    if (grade >= 85) return 18;
-    if (grade >= 80) return 15;
-    return 12;
-}
-
-// ============================================
-// FULL AI MODEL (Math, Language, Science)
-// ============================================
-
-let saseAI = null;
-let useAIForAll = true;  // Set to true to use AI for all sections
-
-async function loadAIModel() {
-    try {
-        // Try to load the full model first
-        let response = await fetch('sase_model_full.json');
-        
-        if (!response.ok) {
-            // Fall back to math-only model
-            response = await fetch('sase_model.json');
-        }
-        
-        saseAI = await response.json();
-        console.log('✅ AI Model loaded!');
-        console.log(`📊 Trained on ${saseAI.trained_on} students`);
-        
-        if (saseAI.r2_scores) {
-            console.log(`📈 Math R²: ${saseAI.r2_scores.math}`);
-            console.log(`📈 Language R²: ${saseAI.r2_scores.language}`);
-            console.log(`📈 Science R²: ${saseAI.r2_scores.science}`);
-        }
-        
-        if (saseAI.warning) {
-            console.warn(saseAI.warning);
-        }
-        
-        return true;
-    } catch (error) {
-        console.log('⚠️ AI model not found, using fallback rules');
-        return false;
-    }
-}
-
-function predictWithAI(subjectType, grades) {
-    if (!saseAI || !useAIForAll) {
-        // Fallback to rule-based
-        return predictFallback(subjectType, grades);
-    }
-    
-    const model = saseAI[subjectType];
-    if (!model) return predictFallback(subjectType, grades);
-    
-    let prediction = model.baseline;
-    
-    for (let i = 0; i < model.features.length; i++) {
-        const subject = model.features[i];
-        const grade = grades[subject] || 85;
-        
-        let adjustment = model.adjustments ? model.adjustments[i] : model.importance[i] * 0.5;
-        prediction += (grade - 85) * adjustment;
-    }
-    
-    // Get max score for this subject
-    let maxScore = 40;
-    if (subjectType === 'language') maxScore = 80;
-    if (subjectType === 'science') maxScore = 30;
-    
-    // Clamp to valid range
-    return Math.min(maxScore, Math.max(0, Math.round(prediction)));
-}
-
-function predictFallback(subjectType, grades) {
-    const mathGrade = grades['General Mathematics'] || 85;
-    const englishGrade = grades['Oral Communication in Context'] || 
-                        grades['Reading and Writing Skills'] || 85;
-    const scienceGrade = grades['Earth and Life Science'] || 
-                        grades['General Biology 1'] || 85;
-    
-    if (subjectType === 'math') return predictSASEMath(mathGrade);
-    if (subjectType === 'language') return predictSASELanguage(englishGrade);
-    if (subjectType === 'science') return predictSASEScience(scienceGrade);
-    return 15;
-}
-
-// Updated results page
-async function initResultsPage() {
-    if (!document.getElementById('score-display')) return;
-    
-    await loadAIModel();
-    
-    const savedGrades = JSON.parse(localStorage.getItem('studentGrades') || '{}');
-    
-    // Use AI for ALL sections
-    const scores = {
-        math: predictWithAI('math', savedGrades),
-        language: predictWithAI('language', savedGrades),
-        science: predictWithAI('science', savedGrades),
-        aptitude: 12  // Default from your data
-    };
-    
-    const totalScore = scores.math + scores.language + scores.science + scores.aptitude;
-    
-    // Update AI status
-    const aiStatusElem = document.getElementById('aiStatus');
-    if (aiStatusElem) {
-        if (saseAI && useAIForAll) {
-            aiStatusElem.innerHTML = `✅ AI Active (Math/Lang/Science) | Trained on ${saseAI.trained_on} students<br>
-            <span style="font-size: 11px;">⚠️ Language & Science AI may be less accurate (need more data)</span>`;
-            aiStatusElem.style.color = '#856404';
-            aiStatusElem.style.background = '#fff3cd';
-        } else {
-            aiStatusElem.innerHTML = `⚠️ Using rule-based predictions`;
-            aiStatusElem.style.color = 'orange';
-        }
-    }
-    
-    // Animate scores (your existing animation code)
-    animateScores(scores, totalScore);
-}
-
-// Keep your existing rule-based functions as fallbacks
 function predictSASEMath(grade) {
     if (grade >= 90) return 35;
     if (grade >= 85) return 25;
@@ -302,8 +136,83 @@ function predictSASEScience(grade) {
     if (grade >= 75) return 10;
     return 8;
 }
+
+function predictSASEAptitude(grade) {
+    return 12;  // Fixed baseline from your data
+}
+
 // ============================================
-// RESULTS PAGE - Display animated scores (UPDATED)
+// AI MODEL (Full: Math, Language, Science)
+// ============================================
+let saseAI = null;
+
+async function loadAIModel() {
+    try {
+        const response = await fetch('sase_model_full.json');
+        
+        if (!response.ok) {
+            console.log('⚠️ Full model not found, trying math-only model');
+            const fallbackResponse = await fetch('sase_model.json');
+            saseAI = await fallbackResponse.json();
+            console.log('✅ Math-only AI Model loaded!');
+        } else {
+            saseAI = await response.json();
+            console.log('✅ Full AI Model loaded (Math, Language, Science)!');
+        }
+        
+        console.log(`📊 Trained on ${saseAI.trained_on} students`);
+        
+        if (saseAI.r2_scores) {
+            console.log(`📈 Math R²: ${saseAI.r2_scores.math}`);
+            console.log(`📈 Language R²: ${saseAI.r2_scores.language}`);
+            console.log(`📈 Science R²: ${saseAI.r2_scores.science}`);
+        }
+        
+        return true;
+    } catch (error) {
+        console.log('⚠️ AI model not found, using rule-based predictions');
+        return false;
+    }
+}
+
+function predictWithAI(subjectType, grades) {
+    if (!saseAI) {
+        // Fallback to rule-based
+        if (subjectType === 'math') return predictSASEMath(grades['General Mathematics'] || 85);
+        if (subjectType === 'language') return predictSASELanguage(grades['Oral Communication in Context'] || 85);
+        if (subjectType === 'science') return predictSASEScience(grades['Earth and Life Science'] || 85);
+        return 12;
+    }
+    
+    const model = saseAI[subjectType];
+    if (!model) {
+        // Fallback if this subject type isn't in the model
+        if (subjectType === 'math') return predictSASEMath(grades['General Mathematics'] || 85);
+        if (subjectType === 'language') return predictSASELanguage(grades['Oral Communication in Context'] || 85);
+        if (subjectType === 'science') return predictSASEScience(grades['Earth and Life Science'] || 85);
+        return 12;
+    }
+    
+    let prediction = model.baseline;
+    
+    for (let i = 0; i < model.features.length; i++) {
+        const subject = model.features[i];
+        const grade = grades[subject] || 85;
+        
+        let adjustment = model.adjustments ? model.adjustments[i] : model.importance[i] * 0.5;
+        prediction += (grade - 85) * adjustment;
+    }
+    
+    // Get max score for this subject
+    let maxScore = 40;
+    if (subjectType === 'language') maxScore = 80;
+    if (subjectType === 'science') maxScore = 30;
+    
+    return Math.min(maxScore, Math.max(0, Math.round(prediction)));
+}
+
+// ============================================
+// RESULTS PAGE - Display animated scores
 // ============================================
 async function initResultsPage() {
     if (!document.getElementById('score-display')) return;
@@ -312,39 +221,36 @@ async function initResultsPage() {
     await loadAIModel();
     
     const savedGrades = JSON.parse(localStorage.getItem('studentGrades') || '{}');
-    const strand = localStorage.getItem('studentStrand') || 'STEM';
     
     console.log('Loaded grades:', savedGrades);
-    console.log('Strand:', strand);
     
-    const mathGrade = savedGrades['General Mathematics'] || 85;
-    const englishGrade = savedGrades['Oral Communication in Context'] || 
-                        savedGrades['Reading and Writing Skills'] || 85;
-    const scienceGrade = savedGrades['Earth and Life Science'] || 
-                        savedGrades['General Biology 1'] || 85;
-    
-    // UPDATED: Use AI for Math, rules for Language and Science
+    // Use AI for ALL sections
     const scores = {
-        math: predictMathWithAI(savedGrades),           // AI-powered (R² = 0.57)
-        english: predictSASELanguage(englishGrade),     // Rule-based
-        science: predictSASEScience(scienceGrade),      // Rule-based
-        aptitude: predictSASEAptitude(mathGrade)        // Rule-based
+        math: predictWithAI('math', savedGrades),
+        language: predictWithAI('language', savedGrades),
+        science: predictWithAI('science', savedGrades),
+        aptitude: 12  // Fixed baseline from your data
     };
     
-    const totalScore = scores.math + scores.english + scores.science + scores.aptitude;
+    const totalScore = scores.math + scores.language + scores.science + scores.aptitude;
     
-    // Update AI status display if element exists
+    // Update AI status display
     const aiStatusElem = document.getElementById('aiStatus');
     if (aiStatusElem) {
         if (saseAI) {
-            aiStatusElem.innerHTML = `✅ Math: AI Model (R² = 0.57) | Lang/Sci: Rule-based`;
-            aiStatusElem.style.color = 'green';
+            aiStatusElem.innerHTML = `✅ AI Active (Math/Lang/Science) | Trained on ${saseAI.trained_on} students<br>
+            <span style="font-size: 11px;">⚠️ Language & Science AI may be less accurate (need more data)</span>`;
+            aiStatusElem.style.color = '#856404';
+            aiStatusElem.style.background = '#fff3cd';
+            aiStatusElem.style.padding = '8px';
+            aiStatusElem.style.borderRadius = '5px';
         } else {
             aiStatusElem.innerHTML = `⚠️ Using rule-based predictions (AI model not loaded)`;
             aiStatusElem.style.color = 'orange';
         }
     }
     
+    // DOM elements
     const mathScore = document.getElementById('math-score');
     const englishScore = document.getElementById('english-score');
     const scienceScore = document.getElementById('science-score');
@@ -364,7 +270,7 @@ async function initResultsPage() {
         const easedProgress = easeOutQuart(progress);
         
         mathScore.textContent = `${Math.round(scores.math * easedProgress)} / 40`;
-        englishScore.textContent = `${Math.round(scores.english * easedProgress)} / 80`;
+        englishScore.textContent = `${Math.round(scores.language * easedProgress)} / 80`;
         scienceScore.textContent = `${Math.round(scores.science * easedProgress)} / 30`;
         aptitudeScore.textContent = `${Math.round(scores.aptitude * easedProgress)} / 30`;
         
