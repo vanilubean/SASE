@@ -1,0 +1,109 @@
+{
+  "math": {
+    "features": [
+      "General Mathematics",
+      "General Physics 1",
+      "General Physics 2",
+      "Statistics and Probability",
+      "Basic Calculus",
+      "Pre Calculus",
+      "Business Math",
+      "Fundamentals of ABM 1",
+      "Fundamentals of ABM 2"
+    ],
+    "adjustments": [
+      0.387717009794622,
+      1.4527440317382543,
+      -0.7547497733914241,
+      0.4512222710641197,
+      0.28670287424707225,
+      -0.720343183994855,
+      -0.6513952622596448,
+      0.3231219757926084,
+      0.09850341060901542
+    ],
+    "baseline": 9.843174494869018,
+    "max_score": 40
+  },
+  "language": {
+    "features": [
+      "21st Century Literature from the Philippines and the World",
+      "Oral Communication in Context",
+      "Reading and Writing Skills",
+      "English for Academic Purposes",
+      "Empowerment Technologies",
+      "Media and Information Literacy",
+      "Practical Research 1",
+      "Practical Research 2",
+      "Creative Writing",
+      "Creative Non Fiction"
+    ],
+    "adjustments": [
+      0.5544813626992152,
+      -0.1159263983523374,
+      0.8009774383628553,
+      -0.22663033678618943,
+      -0.14281668405868686,
+      -0.08518406726768149,
+      0.7511717151828776,
+      -0.9651232461746077,
+      -0.21771563596444848,
+      0.6745928518452018
+    ],
+    "baseline": 49.99533227870312,
+    "max_score": 80
+  },
+  "science": {
+    "features": [
+      "Earth and Life Science",
+      "Physical Science",
+      "General Biology 1",
+      "General Biology 2",
+      "General Chemistry 1",
+      "General Chemistry 2",
+      "General Physics 1",
+      "General Physics 2"
+    ],
+    "adjustments": [
+      0.16311792098989314,
+      -0.2991506154472461,
+      0.9672294550703981,
+      -0.5044193514530804,
+      -0.8414176282328626,
+      0.6721130577047546,
+      0.8721479478598383,
+      -0.5518908179579896
+    ],
+    "baseline": 12.336467970498795,
+    "max_score": 30
+  },
+  "aptitude": {
+    "features": [
+      "Practical Research 1",
+      "Practical Research 2",
+      "Empowerment Technologies",
+      "Media and Information Literacy",
+      "Fundamentals of ABM 1",
+      "Fundamentals of ABM 2",
+      "Trends, Networks, and Critical Thinking in the 21st Century"
+    ],
+    "adjustments": [
+      0.38035586608661304,
+      -0.05785417136238422,
+      0.2676827496480456,
+      -0.37783165075899633,
+      0.10255493682214763,
+      -0.07792763215643532,
+      0.3783438533116573
+    ],
+    "baseline": 13.716596853841764,
+    "max_score": 30
+  },
+  "trained_on": 33,
+  "r2_scores": {
+    "math": 0.7762215252268373,
+    "language": 0.3806083268066942,
+    "science": 0.5657342919845312,
+    "aptitude": 0.30052677406353334
+  }
+}

@@ -172,30 +172,25 @@ let aiLoaded = false;
 
 async function loadAIModel() {
     try {
-        // Get the student's strand from localStorage
-        const strand = localStorage.getItem('studentStrand') || 'STEM';
-        const strandLower = strand.toLowerCase();
+        console.log(`🔄 Loading AI model...`);
         
-        console.log(`🔄 Loading AI model for ${strand} strand...`);
-        
-        // Load the strand-specific model
-        const response = await fetch(`sase_model_${strandLower}.json?v=${Date.now()}`);
+        const response = await fetch(`sase_model.json?v=${Date.now()}`);
         
         if (!response.ok) {
-            console.log(`⚠️ No model for ${strand}, trying fallback`);
-            const fallbackResponse = await fetch('sase_model_full.json');
-            saseAI = await fallbackResponse.json();
-        } else {
-            saseAI = await response.json();
+            throw new Error('File not found');
         }
         
+        saseAI = await response.json();
         aiLoaded = true;
-        console.log(`✅ AI Model loaded for ${saseAI.strand || 'general'} strand!`);
-        console.log(`📊 Trained on ${saseAI.trained_on} students`);
+        console.log(`✅ AI Model loaded! Trained on ${saseAI.trained_on} students`);
+        console.log(`   Math R²: ${saseAI.r2_scores.math}`);
+        console.log(`   Language R²: ${saseAI.r2_scores.language}`);
+        console.log(`   Science R²: ${saseAI.r2_scores.science}`);
+        console.log(`   Aptitude R²: ${saseAI.r2_scores.aptitude}`);
         
         return true;
     } catch (error) {
-        console.log('⚠️ AI model not found, using rule-based predictions');
+        console.log('⚠️ AI model not found, using rule-based');
         aiLoaded = false;
         return false;
     }
