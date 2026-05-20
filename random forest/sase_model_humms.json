@@ -1,0 +1,110 @@
+{
+  "strand": "humms",
+  "math": {
+    "features": [
+      "General Mathematics",
+      "General Physics 1",
+      "General Physics 2",
+      "Statistics and Probability",
+      "Basic Calculus",
+      "Pre Calculus",
+      "Business Math",
+      "Fundamentals of ABM 1",
+      "Fundamentals of ABM 2"
+    ],
+    "adjustments": [
+      0.0,
+      0.0,
+      0.0,
+      0.08399999999999999,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "baseline": 13.38,
+    "max_score": 40
+  },
+  "language": {
+    "features": [
+      "21st Century Literature from the Philippines and the World",
+      "Oral Communication in Context",
+      "Reading and Writing Skills",
+      "English for Academic Purposes",
+      "Empowerment Technologies",
+      "Media and Information Literacy",
+      "Practical Research 1",
+      "Practical Research 2",
+      "Creative Writing",
+      "Creative Non Fiction"
+    ],
+    "adjustments": [
+      0.46600000000000036,
+      -0.03799999999999955,
+      0.05,
+      -0.04799999999999969,
+      -0.8279999999999994,
+      -0.0259999999999998,
+      0.0040000000000006255,
+      0.1,
+      0.006000000000000227,
+      -0.009999999999999431
+    ],
+    "baseline": 59.16,
+    "max_score": 80
+  },
+  "science": {
+    "features": [
+      "Earth and Life Science",
+      "Physical Science",
+      "General Biology 1",
+      "General Biology 2",
+      "General Chemistry 1",
+      "General Chemistry 2",
+      "General Physics 1",
+      "General Physics 2"
+    ],
+    "adjustments": [
+      0.0864761904761906,
+      -0.08599999999999994,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "baseline": 14.52,
+    "max_score": 30
+  },
+  "aptitude": {
+    "features": [
+      "Practical Research 1",
+      "Practical Research 2",
+      "Empowerment Technologies",
+      "Media and Information Literacy",
+      "Fundamentals of ABM 1",
+      "Fundamentals of ABM 2",
+      "Trends, Networks, and Critical Thinking in the 21st Century"
+    ],
+    "adjustments": [
+      -0.07599999999999998,
+      -0.092,
+      0.04600000000000008,
+      0.10400000000000009,
+      0.0,
+      0.0,
+      0.23399999999999999
+    ],
+    "baseline": 12.28,
+    "max_score": 30
+  },
+  "trained_on": 10,
+  "r2_scores": {
+    "math": 0.8646684432166973,
+    "language": 0.849251110422477,
+    "science": 0.60874403459185,
+    "aptitude": 0.7845894428152492
+  }
+}
