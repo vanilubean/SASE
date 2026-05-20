@@ -86,19 +86,19 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "bio, ian",stem,male,General Chemistry 2,91,Science,19,58,19,9,105
 "bio, ian",stem,male,General Physics 1,91,"Science, Mathematics",19,58,19,9,105
 "bio, ian",stem,male,General Physics 2,88,"Science, Mathematics",19,58,19,9,105
-"blake, daphne",humms,female,"Trends, Networks, and Critical Thinking in the 21st Century",98,Aptitude,17,60,9,11,97
-"blake, daphne",humms,female,Empowerment Technologies,91,"Aptitude, Language",17,60,9,11,97
-"blake, daphne",humms,female,Media and Information Literacy,95,"Aptitude, Language",17,60,9,11,97
-"blake, daphne",humms,female,Practical Research 1,87,"Aptitude, Language",17,60,9,11,97
-"blake, daphne",humms,female,Practical Research 2,90,"Aptitude, Language",17,60,9,11,97
-"blake, daphne",humms,female,21st Century Literature from the Philippines and the World,94,Language,17,60,9,11,97
-"blake, daphne",humms,female,Creative Non Fiction,93,Language,17,60,9,11,97
-"blake, daphne",humms,female,Creative Writing,93,Language,17,60,9,11,97
-"blake, daphne",humms,female,English for Academic Purposes,96,Language,17,60,9,11,97
-"blake, daphne",humms,female,Oral Communication in Context,96,Language,17,60,9,11,97
-"blake, daphne",humms,female,Reading and Writing Skills,95,Language,17,60,9,11,97
-"blake, daphne",humms,female,Statistics and Probability,80,Mathematics,17,60,9,11,97
-"blake, daphne",humms,female,Earth and Life Science,90,Science,17,60,9,11,97
+"blake, daphne",humss,female,"Trends, Networks, and Critical Thinking in the 21st Century",98,Aptitude,17,60,9,11,97
+"blake, daphne",humss,female,Empowerment Technologies,91,"Aptitude, Language",17,60,9,11,97
+"blake, daphne",humss,female,Media and Information Literacy,95,"Aptitude, Language",17,60,9,11,97
+"blake, daphne",humss,female,Practical Research 1,87,"Aptitude, Language",17,60,9,11,97
+"blake, daphne",humss,female,Practical Research 2,90,"Aptitude, Language",17,60,9,11,97
+"blake, daphne",humss,female,21st Century Literature from the Philippines and the World,94,Language,17,60,9,11,97
+"blake, daphne",humss,female,Creative Non Fiction,93,Language,17,60,9,11,97
+"blake, daphne",humss,female,Creative Writing,93,Language,17,60,9,11,97
+"blake, daphne",humss,female,English for Academic Purposes,96,Language,17,60,9,11,97
+"blake, daphne",humss,female,Oral Communication in Context,96,Language,17,60,9,11,97
+"blake, daphne",humss,female,Reading and Writing Skills,95,Language,17,60,9,11,97
+"blake, daphne",humss,female,Statistics and Probability,80,Mathematics,17,60,9,11,97
+"blake, daphne",humss,female,Earth and Life Science,90,Science,17,60,9,11,97
 "butterfly, star",tvl,female,Empowerment Technologies,86,"Aptitude, Language",16,49,7,10,82
 "butterfly, star",tvl,female,Media and Information Literacy,89,"Aptitude, Language",16,49,7,10,82
 "butterfly, star",tvl,female,Practical Research 1,93,"Aptitude, Language",16,49,7,10,82
@@ -168,45 +168,45 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "river, ria",stem,female,General Chemistry 2,83,Science,19,64,13,11,107
 "river, ria",stem,female,General Physics 1,88,"Science, Mathematics",19,64,13,11,107
 "river, ria",stem,female,General Physics 2,90,"Science, Mathematics",19,64,13,11,107
-"kent, jovhan",humms,male,"Trends, Networks, and Critical Thinking in the 21st Century",90,Aptitude,7,57,10,18,92
-"kent, jovhan",humms,male,Empowerment Technologies,92,"Aptitude, Language",7,57,10,18,92
-"kent, jovhan",humms,male,Media and Information Literacy,95,"Aptitude, Language",7,57,10,18,92
-"kent, jovhan",humms,male,Practical Research 1,91,"Aptitude, Language",7,57,10,18,92
-"kent, jovhan",humms,male,Practical Research 2,93,"Aptitude, Language",7,57,10,18,92
-"kent, jovhan",humms,male,21st Century Literature from the Philippines and the World,93,Language,7,57,10,18,92
-"kent, jovhan",humms,male,Creative Non Fiction,93,Language,7,57,10,18,92
-"kent, jovhan",humms,male,Creative Writing,88,Language,7,57,10,18,92
-"kent, jovhan",humms,male,English for Academic Purposes,93,Language,7,57,10,18,92
-"kent, jovhan",humms,male,Oral Communication in Context,91,Language,7,57,10,18,92
-"kent, jovhan",humms,male,Reading and Writing Skills,93,Language,7,57,10,18,92
-"kent, jovhan",humms,male,Statistics and Probability,82,Mathematics,7,57,10,18,92
-"kent, jovhan",humms,male,Earth and Life Science,90,Science,7,57,10,18,92
-"explorer, dora",humms,female,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,16,57,10,13,96
-"explorer, dora",humms,female,Empowerment Technologies,91,"Aptitude, Language",16,57,10,13,96
-"explorer, dora",humms,female,Media and Information Literacy,93,"Aptitude, Language",16,57,10,13,96
-"explorer, dora",humms,female,Practical Research 1,90,"Aptitude, Language",16,57,10,13,96
-"explorer, dora",humms,female,Practical Research 2,92,"Aptitude, Language",16,57,10,13,96
-"explorer, dora",humms,female,21st Century Literature from the Philippines and the World,95,Language,16,57,10,13,96
-"explorer, dora",humms,female,Creative Non Fiction,93,Language,16,57,10,13,96
-"explorer, dora",humms,female,Creative Writing,92,Language,16,57,10,13,96
-"explorer, dora",humms,female,English for Academic Purposes,96,Language,16,57,10,13,96
-"explorer, dora",humms,female,Oral Communication in Context,95,Language,16,57,10,13,96
-"explorer, dora",humms,female,Reading and Writing Skills,95,Language,16,57,10,13,96
-"explorer, dora",humms,female,Statistics and Probability,86,Mathematics,16,57,10,13,96
-"explorer, dora",humms,female,Earth and Life Science,90,Science,16,57,10,13,96
-"fazbear, freddy",humms,male,"Trends, Networks, and Critical Thinking in the 21st Century",93,Aptitude,19,59,10,12,100
-"fazbear, freddy",humms,male,Empowerment Technologies,93,"Aptitude, Language",19,59,10,12,100
-"fazbear, freddy",humms,male,Media and Information Literacy,93,"Aptitude, Language",19,59,10,12,100
-"fazbear, freddy",humms,male,Practical Research 1,90,"Aptitude, Language",19,59,10,12,100
-"fazbear, freddy",humms,male,Practical Research 2,91,"Aptitude, Language",19,59,10,12,100
-"fazbear, freddy",humms,male,21st Century Literature from the Philippines and the World,88,Language,19,59,10,12,100
-"fazbear, freddy",humms,male,Creative Non Fiction,93,Language,19,59,10,12,100
-"fazbear, freddy",humms,male,Creative Writing,94,Language,19,59,10,12,100
-"fazbear, freddy",humms,male,English for Academic Purposes,96,Language,19,59,10,12,100
-"fazbear, freddy",humms,male,Oral Communication in Context,97,Language,19,59,10,12,100
-"fazbear, freddy",humms,male,Reading and Writing Skills,95,Language,19,59,10,12,100
-"fazbear, freddy",humms,male,Statistics and Probability,86,Mathematics,19,59,10,12,100
-"fazbear, freddy",humms,male,Earth and Life Science,91,Science,19,59,10,12,100
+"kent, jovhan",humss,male,"Trends, Networks, and Critical Thinking in the 21st Century",90,Aptitude,7,57,10,18,92
+"kent, jovhan",humss,male,Empowerment Technologies,92,"Aptitude, Language",7,57,10,18,92
+"kent, jovhan",humss,male,Media and Information Literacy,95,"Aptitude, Language",7,57,10,18,92
+"kent, jovhan",humss,male,Practical Research 1,91,"Aptitude, Language",7,57,10,18,92
+"kent, jovhan",humss,male,Practical Research 2,93,"Aptitude, Language",7,57,10,18,92
+"kent, jovhan",humss,male,21st Century Literature from the Philippines and the World,93,Language,7,57,10,18,92
+"kent, jovhan",humss,male,Creative Non Fiction,93,Language,7,57,10,18,92
+"kent, jovhan",humss,male,Creative Writing,88,Language,7,57,10,18,92
+"kent, jovhan",humss,male,English for Academic Purposes,93,Language,7,57,10,18,92
+"kent, jovhan",humss,male,Oral Communication in Context,91,Language,7,57,10,18,92
+"kent, jovhan",humss,male,Reading and Writing Skills,93,Language,7,57,10,18,92
+"kent, jovhan",humss,male,Statistics and Probability,82,Mathematics,7,57,10,18,92
+"kent, jovhan",humss,male,Earth and Life Science,90,Science,7,57,10,18,92
+"explorer, dora",humss,female,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,16,57,10,13,96
+"explorer, dora",humss,female,Empowerment Technologies,91,"Aptitude, Language",16,57,10,13,96
+"explorer, dora",humss,female,Media and Information Literacy,93,"Aptitude, Language",16,57,10,13,96
+"explorer, dora",humss,female,Practical Research 1,90,"Aptitude, Language",16,57,10,13,96
+"explorer, dora",humss,female,Practical Research 2,92,"Aptitude, Language",16,57,10,13,96
+"explorer, dora",humss,female,21st Century Literature from the Philippines and the World,95,Language,16,57,10,13,96
+"explorer, dora",humss,female,Creative Non Fiction,93,Language,16,57,10,13,96
+"explorer, dora",humss,female,Creative Writing,92,Language,16,57,10,13,96
+"explorer, dora",humss,female,English for Academic Purposes,96,Language,16,57,10,13,96
+"explorer, dora",humss,female,Oral Communication in Context,95,Language,16,57,10,13,96
+"explorer, dora",humss,female,Reading and Writing Skills,95,Language,16,57,10,13,96
+"explorer, dora",humss,female,Statistics and Probability,86,Mathematics,16,57,10,13,96
+"explorer, dora",humss,female,Earth and Life Science,90,Science,16,57,10,13,96
+"fazbear, freddy",humss,male,"Trends, Networks, and Critical Thinking in the 21st Century",93,Aptitude,19,59,10,12,100
+"fazbear, freddy",humss,male,Empowerment Technologies,93,"Aptitude, Language",19,59,10,12,100
+"fazbear, freddy",humss,male,Media and Information Literacy,93,"Aptitude, Language",19,59,10,12,100
+"fazbear, freddy",humss,male,Practical Research 1,90,"Aptitude, Language",19,59,10,12,100
+"fazbear, freddy",humss,male,Practical Research 2,91,"Aptitude, Language",19,59,10,12,100
+"fazbear, freddy",humss,male,21st Century Literature from the Philippines and the World,88,Language,19,59,10,12,100
+"fazbear, freddy",humss,male,Creative Non Fiction,93,Language,19,59,10,12,100
+"fazbear, freddy",humss,male,Creative Writing,94,Language,19,59,10,12,100
+"fazbear, freddy",humss,male,English for Academic Purposes,96,Language,19,59,10,12,100
+"fazbear, freddy",humss,male,Oral Communication in Context,97,Language,19,59,10,12,100
+"fazbear, freddy",humss,male,Reading and Writing Skills,95,Language,19,59,10,12,100
+"fazbear, freddy",humss,male,Statistics and Probability,86,Mathematics,19,59,10,12,100
+"fazbear, freddy",humss,male,Earth and Life Science,91,Science,19,59,10,12,100
 "forger, anya",stem,female,Empowerment Technologies,86,"Aptitude, Language",9,46,8,16,79
 "forger, anya",stem,female,Media and Information Literacy,95,"Aptitude, Language",9,46,8,16,79
 "forger, anya",stem,female,Practical Research 1,86,"Aptitude, Language",9,46,8,16,79
@@ -257,19 +257,19 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "hatsune, miku",abm,female,Fundamentals of ABM 2,93,"Mathematics, Aptitude",13,42,11,15,81
 "hatsune, miku",abm,female,Earth and Life Science,91,Science,13,42,11,15,81
 "hatsune, miku",abm,female,Physical Science,89,Science,13,42,11,15,81
-"june, isabella",humms,female,"Trends, Networks, and Critical Thinking in the 21st Century",89,Aptitude,19,46,11,9,85
-"june, isabella",humms,female,Empowerment Technologies,85,"Aptitude, Language",19,46,11,9,85
-"june, isabella",humms,female,Media and Information Literacy,89,"Aptitude, Language",19,46,11,9,85
-"june, isabella",humms,female,Practical Research 1,80,"Aptitude, Language",19,46,11,9,85
-"june, isabella",humms,female,Practical Research 2,87,"Aptitude, Language",19,46,11,9,85
-"june, isabella",humms,female,English for Academic Purposes,84,Language,19,46,11,9,85
-"june, isabella",humms,female,Creative Non Fiction,92,Language,19,46,11,9,85
-"june, isabella",humms,female,Creative Writing,84,Language,19,46,11,9,85
-"june, isabella",humms,female,Oral Communication in Context,79,Language,19,46,11,9,85
-"june, isabella",humms,female,Reading and Writing Skills,80,Language,19,46,11,9,85
-"june, isabella",humms,female,Statistics and Probability,83,Mathematics,19,46,11,9,85
-"june, isabella",humms,female,Earth and Life Science,81,Science,19,46,11,9,85
-"june, isabella",humms,female,Physical Science,86,Science,19,46,11,9,85
+"june, isabella",humss,female,"Trends, Networks, and Critical Thinking in the 21st Century",89,Aptitude,19,46,11,9,85
+"june, isabella",humss,female,Empowerment Technologies,85,"Aptitude, Language",19,46,11,9,85
+"june, isabella",humss,female,Media and Information Literacy,89,"Aptitude, Language",19,46,11,9,85
+"june, isabella",humss,female,Practical Research 1,80,"Aptitude, Language",19,46,11,9,85
+"june, isabella",humss,female,Practical Research 2,87,"Aptitude, Language",19,46,11,9,85
+"june, isabella",humss,female,English for Academic Purposes,84,Language,19,46,11,9,85
+"june, isabella",humss,female,Creative Non Fiction,92,Language,19,46,11,9,85
+"june, isabella",humss,female,Creative Writing,84,Language,19,46,11,9,85
+"june, isabella",humss,female,Oral Communication in Context,79,Language,19,46,11,9,85
+"june, isabella",humss,female,Reading and Writing Skills,80,Language,19,46,11,9,85
+"june, isabella",humss,female,Statistics and Probability,83,Mathematics,19,46,11,9,85
+"june, isabella",humss,female,Earth and Life Science,81,Science,19,46,11,9,85
+"june, isabella",humss,female,Physical Science,86,Science,19,46,11,9,85
 "ketchum, ash",abm,male,Empowerment Technologies,92,"Aptitude, Language",14,54,12,13,93
 "ketchum, ash",abm,male,Media and Information Literacy,94,"Aptitude, Language",14,54,12,13,93
 "ketchum, ash",abm,male,Practical Research 1,90,"Aptitude, Language",14,54,12,13,93
@@ -364,19 +364,19 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "parker, peter",stem,male,General Chemistry 2,97,Science,21,65,21,19,126
 "parker, peter",stem,male,General Physics 1,97,"Science, Mathematics",21,65,21,19,126
 "parker, peter",stem,male,General Physics 2,96,"Science, Mathematics",21,65,21,19,126
-"poe, edgar",humms,male,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,13,64,9,10,96
-"poe, edgar",humms,male,Empowerment Technologies,89,"Aptitude, Language",13,64,9,10,96
-"poe, edgar",humms,male,Media and Information Literacy,92,"Aptitude, Language",13,64,9,10,96
-"poe, edgar",humms,male,Practical Research 1,96,"Aptitude, Language",13,64,9,10,96
-"poe, edgar",humms,male,Practical Research 2,97,"Aptitude, Language",13,64,9,10,96
-"poe, edgar",humms,male,21st Century Literature from the Philippines and the World,94,Language,13,64,9,10,96
-"poe, edgar",humms,male,Creative Non Fiction,99,Language,13,64,9,10,96
-"poe, edgar",humms,male,Creative Writing,98,Language,13,64,9,10,96
-"poe, edgar",humms,male,English for Academic Purposes,92,Language,13,64,9,10,96
-"poe, edgar",humms,male,Oral Communication in Context,96,Language,13,64,9,10,96
-"poe, edgar",humms,male,Reading and Writing Skills,97,Language,13,64,9,10,96
-"poe, edgar",humms,male,Statistics and Probability,87,Mathematics,13,64,9,10,96
-"poe, edgar",humms,male,Earth and Life Science,88,Science,13,64,9,10,96
+"poe, edgar",humss,male,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,13,64,9,10,96
+"poe, edgar",humss,male,Empowerment Technologies,89,"Aptitude, Language",13,64,9,10,96
+"poe, edgar",humss,male,Media and Information Literacy,92,"Aptitude, Language",13,64,9,10,96
+"poe, edgar",humss,male,Practical Research 1,96,"Aptitude, Language",13,64,9,10,96
+"poe, edgar",humss,male,Practical Research 2,97,"Aptitude, Language",13,64,9,10,96
+"poe, edgar",humss,male,21st Century Literature from the Philippines and the World,94,Language,13,64,9,10,96
+"poe, edgar",humss,male,Creative Non Fiction,99,Language,13,64,9,10,96
+"poe, edgar",humss,male,Creative Writing,98,Language,13,64,9,10,96
+"poe, edgar",humss,male,English for Academic Purposes,92,Language,13,64,9,10,96
+"poe, edgar",humss,male,Oral Communication in Context,96,Language,13,64,9,10,96
+"poe, edgar",humss,male,Reading and Writing Skills,97,Language,13,64,9,10,96
+"poe, edgar",humss,male,Statistics and Probability,87,Mathematics,13,64,9,10,96
+"poe, edgar",humss,male,Earth and Life Science,88,Science,13,64,9,10,96
 "billie, jean",abm,female,Empowerment Technologies,94,"Aptitude, Language",17,42,12,9,80
 "billie, jean",abm,female,Media and Information Literacy,94,"Aptitude, Language",17,42,12,9,80
 "billie, jean",abm,female,Practical Research 1,90,"Aptitude, Language",17,42,12,9,80
@@ -403,45 +403,45 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "sinatra, frank",tvl,male,Statistics and Probability,94,Mathematics,11,54,10,11,86
 "sinatra, frank",tvl,male,Earth and Life Science,90,Science,11,54,10,11,86
 "sinatra, frank",tvl,male,Physical Science,91,Science,11,54,10,11,86
-"squarepants, spongebob",humms,male,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,16,35,10,14,75
-"squarepants, spongebob",humms,male,Empowerment Technologies,94,"Aptitude, Language",16,35,10,14,75
-"squarepants, spongebob",humms,male,Media and Information Literacy,92,"Aptitude, Language",16,35,10,14,75
-"squarepants, spongebob",humms,male,Practical Research 1,86,"Aptitude, Language",16,35,10,14,75
-"squarepants, spongebob",humms,male,Practical Research 2,87,"Aptitude, Language",16,35,10,14,75
-"squarepants, spongebob",humms,male,21st Century Literature from the Philippines and the World,90,Language,16,35,10,14,75
-"squarepants, spongebob",humms,male,Creative Non Fiction,94,Language,16,35,10,14,75
-"squarepants, spongebob",humms,male,Creative Writing,95,Language,16,35,10,14,75
-"squarepants, spongebob",humms,male,English for Academic Purposes,90,Language,16,35,10,14,75
-"squarepants, spongebob",humms,male,Oral Communication in Context,91,Language,16,35,10,14,75
-"squarepants, spongebob",humms,male,Reading and Writing Skills,93,Language,16,35,10,14,75
-"squarepants, spongebob",humms,male,Statistics and Probability,80,Mathematics,16,35,10,14,75
-"squarepants, spongebob",humms,male,Earth and Life Science,87,Science,16,35,10,14,75
-"star, patrick",humms,male,"Trends, Networks, and Critical Thinking in the 21st Century",78,Aptitude,4,20,5,9,38
-"star, patrick",humms,male,Empowerment Technologies,78,"Aptitude, Language",4,20,3,9,36
-"star, patrick",humms,male,Media and Information Literacy,81,"Aptitude, Language",4,20,3,9,36
-"star, patrick",humms,male,Practical Research 1,89,"Aptitude, Language",4,20,3,9,36
-"star, patrick",humms,male,Practical Research 2,86,"Aptitude, Language",4,20,3,9,36
-"star, patrick",humms,male,21st Century Literature from the Philippines and the World,79,Language,4,20,3,9,36
-"star, patrick",humms,male,Creative Non Fiction,92,Language,4,20,3,9,36
-"star, patrick",humms,male,Creative Writing,93,Language,4,20,3,9,36
-"star, patrick",humms,male,English for Academic Purposes,82,Language,4,20,3,9,36
-"star, patrick",humms,male,Oral Communication in Context,90,Language,4,20,3,9,36
-"star, patrick",humms,male,Reading and Writing Skills,77,Language,4,20,3,9,36
-"star, patrick",humms,male,Statistics and Probability,75,Mathematics,4,20,3,9,36
-"star, patrick",humms,male,Earth and Life Science,80,Science,4,20,3,9,36
-"swift, taylor",humms,female,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,15,72,17,17,121
-"swift, taylor",humms,female,Empowerment Technologies,91,"Aptitude, Language",15,72,17,17,121
-"swift, taylor",humms,female,Media and Information Literacy,97,"Aptitude, Language",15,72,17,17,121
-"swift, taylor",humms,female,Practical Research 1,90,"Aptitude, Language",15,72,17,17,121
-"swift, taylor",humms,female,Practical Research 2,92,"Aptitude, Language",15,72,17,17,121
-"swift, taylor",humms,female,Creative Non Fiction,98,Language,15,72,17,17,121
-"swift, taylor",humms,female,Creative Writing,99,Language,15,72,17,17,121
-"swift, taylor",humms,female,English for Academic Purposes,96,Language,15,72,17,17,121
-"swift, taylor",humms,female,Oral Communication in Context,95,Language,15,72,17,17,121
-"swift, taylor",humms,female,Reading and Writing Skills,97,Language,15,72,17,17,121
-"swift, taylor",humms,female,Statistics and Probability,94,Mathematics,15,72,17,17,121
-"swift, taylor",humms,female,21st Century Literature from the Philippines and the World,95,Language,15,72,17,17,121
-"swift, taylor",humms,female,Earth and Life Science,93,Science,15,72,17,17,121
+"squarepants, spongebob",humss,male,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,16,35,10,14,75
+"squarepants, spongebob",humss,male,Empowerment Technologies,94,"Aptitude, Language",16,35,10,14,75
+"squarepants, spongebob",humss,male,Media and Information Literacy,92,"Aptitude, Language",16,35,10,14,75
+"squarepants, spongebob",humss,male,Practical Research 1,86,"Aptitude, Language",16,35,10,14,75
+"squarepants, spongebob",humss,male,Practical Research 2,87,"Aptitude, Language",16,35,10,14,75
+"squarepants, spongebob",humss,male,21st Century Literature from the Philippines and the World,90,Language,16,35,10,14,75
+"squarepants, spongebob",humss,male,Creative Non Fiction,94,Language,16,35,10,14,75
+"squarepants, spongebob",humss,male,Creative Writing,95,Language,16,35,10,14,75
+"squarepants, spongebob",humss,male,English for Academic Purposes,90,Language,16,35,10,14,75
+"squarepants, spongebob",humss,male,Oral Communication in Context,91,Language,16,35,10,14,75
+"squarepants, spongebob",humss,male,Reading and Writing Skills,93,Language,16,35,10,14,75
+"squarepants, spongebob",humss,male,Statistics and Probability,80,Mathematics,16,35,10,14,75
+"squarepants, spongebob",humss,male,Earth and Life Science,87,Science,16,35,10,14,75
+"star, patrick",humss,male,"Trends, Networks, and Critical Thinking in the 21st Century",78,Aptitude,4,20,5,9,38
+"star, patrick",humss,male,Empowerment Technologies,78,"Aptitude, Language",4,20,3,9,36
+"star, patrick",humss,male,Media and Information Literacy,81,"Aptitude, Language",4,20,3,9,36
+"star, patrick",humss,male,Practical Research 1,89,"Aptitude, Language",4,20,3,9,36
+"star, patrick",humss,male,Practical Research 2,86,"Aptitude, Language",4,20,3,9,36
+"star, patrick",humss,male,21st Century Literature from the Philippines and the World,79,Language,4,20,3,9,36
+"star, patrick",humss,male,Creative Non Fiction,92,Language,4,20,3,9,36
+"star, patrick",humss,male,Creative Writing,93,Language,4,20,3,9,36
+"star, patrick",humss,male,English for Academic Purposes,82,Language,4,20,3,9,36
+"star, patrick",humss,male,Oral Communication in Context,90,Language,4,20,3,9,36
+"star, patrick",humss,male,Reading and Writing Skills,77,Language,4,20,3,9,36
+"star, patrick",humss,male,Statistics and Probability,75,Mathematics,4,20,3,9,36
+"star, patrick",humss,male,Earth and Life Science,80,Science,4,20,3,9,36
+"swift, taylor",humss,female,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,15,72,17,17,121
+"swift, taylor",humss,female,Empowerment Technologies,91,"Aptitude, Language",15,72,17,17,121
+"swift, taylor",humss,female,Media and Information Literacy,97,"Aptitude, Language",15,72,17,17,121
+"swift, taylor",humss,female,Practical Research 1,90,"Aptitude, Language",15,72,17,17,121
+"swift, taylor",humss,female,Practical Research 2,92,"Aptitude, Language",15,72,17,17,121
+"swift, taylor",humss,female,Creative Non Fiction,98,Language,15,72,17,17,121
+"swift, taylor",humss,female,Creative Writing,99,Language,15,72,17,17,121
+"swift, taylor",humss,female,English for Academic Purposes,96,Language,15,72,17,17,121
+"swift, taylor",humss,female,Oral Communication in Context,95,Language,15,72,17,17,121
+"swift, taylor",humss,female,Reading and Writing Skills,97,Language,15,72,17,17,121
+"swift, taylor",humss,female,Statistics and Probability,94,Mathematics,15,72,17,17,121
+"swift, taylor",humss,female,21st Century Literature from the Philippines and the World,95,Language,15,72,17,17,121
+"swift, taylor",humss,female,Earth and Life Science,93,Science,15,72,17,17,121
 "star, twinkle",abm,female,Empowerment Technologies,92,"Aptitude, Language",13,46,7,17,83
 "star, twinkle",abm,female,Media and Information Literacy,90,"Aptitude, Language",13,46,7,17,83
 "star, twinkle",abm,female,Practical Research 1,91,"Aptitude, Language",13,46,7,17,83
@@ -475,18 +475,18 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "del ray, lana",stem,male,General Chemistry 2,84,Science,15,53,10,7,85
 "del ray, lana",stem,male,General Physics 1,93,"Science, Mathematics",15,53,10,7,85
 "del ray, lana",stem,male,General Physics 2,91,"Science, Mathematics",15,53,10,7,85
-"ceasar, julius",humms,male,"Trends, Networks, and Critical Thinking in the 21st Century",98,Aptitude,18,50,13,12,93
-"ceasar, julius",humms,male,Empowerment Technologies,94,"Aptitude, Language",18,50,13,12,93
-"ceasar, julius",humms,male,Media and Information Literacy,95,"Aptitude, Language",18,50,13,12,93
-"ceasar, julius",humms,male,Practical Research 1,90,"Aptitude, Language",18,50,13,12,93
-"ceasar, julius",humms,male,Practical Research 2,87,"Aptitude, Language",18,50,13,12,93
-"ceasar, julius",humms,male,21st Century Literature from the Philippines and the World,81,Language,18,50,13,12,93
-"ceasar, julius",humms,male,Creative Non Fiction,89,Language,18,50,13,12,93
-"ceasar, julius",humms,male,Creative Writing,90,Language,18,50,13,12,93
-"ceasar, julius",humms,male,English for Academic Purposes,96,Language,18,50,13,12,93
-"ceasar, julius",humms,male,Oral Communication in Context,99,Language,18,50,13,12,93
-"ceasar, julius",humms,male,Reading and Writing Skills,97,Language,18,50,13,12,93
-"ceasar, julius",humms,male,Statistics and Probability,80,Mathematics,18,50,13,12,93
+"ceasar, julius",humss,male,"Trends, Networks, and Critical Thinking in the 21st Century",98,Aptitude,18,50,13,12,93
+"ceasar, julius",humss,male,Empowerment Technologies,94,"Aptitude, Language",18,50,13,12,93
+"ceasar, julius",humss,male,Media and Information Literacy,95,"Aptitude, Language",18,50,13,12,93
+"ceasar, julius",humss,male,Practical Research 1,90,"Aptitude, Language",18,50,13,12,93
+"ceasar, julius",humss,male,Practical Research 2,87,"Aptitude, Language",18,50,13,12,93
+"ceasar, julius",humss,male,21st Century Literature from the Philippines and the World,81,Language,18,50,13,12,93
+"ceasar, julius",humss,male,Creative Non Fiction,89,Language,18,50,13,12,93
+"ceasar, julius",humss,male,Creative Writing,90,Language,18,50,13,12,93
+"ceasar, julius",humss,male,English for Academic Purposes,96,Language,18,50,13,12,93
+"ceasar, julius",humss,male,Oral Communication in Context,99,Language,18,50,13,12,93
+"ceasar, julius",humss,male,Reading and Writing Skills,97,Language,18,50,13,12,93
+"ceasar, julius",humss,male,Statistics and Probability,80,Mathematics,18,50,13,12,93
 "ramsay, gordon",tvl,male,Empowerment Technologies,96,"Aptitude, Language",18,54,11,16,99
 "ramsay, gordon",tvl,male,Media and Information Literacy,94,"Aptitude, Language",18,54,11,16,99
 "ramsay, gordon",tvl,male,Practical Research 1,94,"Aptitude, Language",18,54,11,16,99

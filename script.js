@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'abm':
                     window.location.href = 'strand/abm.html';
                     break;
-                case 'humms':
-                    window.location.href = 'strand/humms.html';
+                case 'humss':
+                    window.location.href = 'strand/humss.html';
                     break;
             }
         });
@@ -176,7 +176,7 @@ function saveAllGrades() {
         if (titleText.includes('STEM')) strand = 'STEM';
         else if (titleText.includes('TVL')) strand = 'TVL';
         else if (titleText.includes('ABM')) strand = 'ABM';
-        else if (titleText.includes('HUMMS')) strand = 'HUMMS';
+        else if (titleText.includes('HUMSS')) strand = 'HUMSS';
     }
     
     localStorage.setItem('studentGrades', JSON.stringify(grades));
@@ -356,10 +356,7 @@ async function initResultsPage() {
     
     const predictAgainBtn = document.getElementById('predict-again');
     if (predictAgainBtn) {
-        // Remove any existing event listeners to prevent conflicts
-        const newBtn = predictAgainBtn.cloneNode(true);
-        predictAgainBtn.parentNode.replaceChild(newBtn, predictAgainBtn);
-        newBtn.addEventListener('click', () => window.location.href = '/SASE/index.html');
+        predictAgainBtn.addEventListener('click', () => window.location.href = '../index.html');
     }
 }
 // INITIALIZE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
