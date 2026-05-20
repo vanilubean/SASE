@@ -1,0 +1,90 @@
+{
+  "strand": "stem",
+  "math": {
+    "features": [
+      "General Mathematics",
+      "Statistics and Probability",
+      "Basic Calculus",
+      "Pre Calculus",
+      "Business Math"
+    ],
+    "adjustments": [
+      0.15400000000000008,
+      0.5199999999999999,
+      0.41999999999999993,
+      0.011999999999999922,
+      0.0
+    ],
+    "baseline": 10.42,
+    "max_score": 40
+  },
+  "language": {
+    "features": [
+      "21st Century Literature from the Philippines and the World",
+      "Oral Communication in Context",
+      "Reading and Writing Skills",
+      "English for Academic Purposes",
+      "Creative Writing",
+      "Creative Non Fiction"
+    ],
+    "adjustments": [
+      -0.18999999999999986,
+      0.24600000000000008,
+      -0.11200000000000046,
+      0.16199999999999976,
+      0.0,
+      0.0
+    ],
+    "baseline": 54.92,
+    "max_score": 80
+  },
+  "science": {
+    "features": [
+      "Earth and Life Science",
+      "Physical Science",
+      "General Biology 1",
+      "General Biology 2",
+      "General Chemistry 1",
+      "General Chemistry 2",
+      "General Physics 1",
+      "General Physics 2"
+    ],
+    "adjustments": [
+      -0.016000000000000014,
+      0.0,
+      0.2620000000000001,
+      0.242,
+      -0.005999999999999872,
+      0.1120000000000001,
+      -0.0019999999999999575,
+      -0.005999999999999872
+    ],
+    "baseline": 9.94,
+    "max_score": 30
+  },
+  "aptitude": {
+    "features": [
+      "Practical Research 1",
+      "Practical Research 2",
+      "Empowerment Technologies",
+      "Media and Information Literacy",
+      "Trends, Networks, and Critical Thinking in the 21st Century"
+    ],
+    "adjustments": [
+      0.3200000000000001,
+      0.1120000000000001,
+      0.15400000000000008,
+      -0.352,
+      0.0
+    ],
+    "baseline": 14.62,
+    "max_score": 30
+  },
+  "trained_on": 11,
+  "r2_scores": {
+    "math": 0.9110483443708609,
+    "language": 0.7532346964064436,
+    "science": 0.9444790322580645,
+    "aptitude": 0.8646766509433963
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "strand": "abm",
+  "math": {
+    "features": [
+      "General Mathematics",
+      "Statistics and Probability",
+      "Basic Calculus",
+      "Pre Calculus",
+      "Business Math"
+    ],
+    "adjustments": [
+      0.0,
+      0.0019999999999999575,
+      0.0,
+      0.0,
+      -0.12599999999999997
+    ],
+    "baseline": 11.14,
+    "max_score": 40
+  },
+  "language": {
+    "features": [
+      "21st Century Literature from the Philippines and the World",
+      "Oral Communication in Context",
+      "Reading and Writing Skills",
+      "English for Academic Purposes",
+      "Creative Writing",
+      "Creative Non Fiction"
+    ],
+    "adjustments": [
+      -0.5519999999999996,
+      0.1480000000000004,
+      0.0,
+      0.05200000000000031,
+      0.0,
+      0.0
+    ],
+    "baseline": 48.8,
+    "max_score": 80
+  },
+  "science": {
+    "features": [
+      "Earth and Life Science",
+      "Physical Science",
+      "General Biology 1",
+      "General Biology 2",
+      "General Chemistry 1",
+      "General Chemistry 2",
+      "General Physics 1",
+      "General Physics 2"
+    ],
+    "adjustments": [
+      -0.17200000000000007,
+      -0.05999999999999996,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "baseline": 14.84,
+    "max_score": 30
+  },
+  "aptitude": {
+    "features": [
+      "Practical Research 1",
+      "Practical Research 2",
+      "Empowerment Technologies",
+      "Media and Information Literacy",
+      "Trends, Networks, and Critical Thinking in the 21st Century"
+    ],
+    "adjustments": [
+      0.0,
+      0.05,
+      0.07600000000000015,
+      0.04600000000000008,
+      0.0
+    ],
+    "baseline": 13.04,
+    "max_score": 30
+  },
+  "trained_on": 5,
+  "r2_scores": {
+    "math": 0.7437234042553189,
+    "language": 0.7418076923076925,
+    "science": 0.7200000000000002,
+    "aptitude": 0.7779333333333331
+  }
+}
