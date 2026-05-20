@@ -19,10 +19,15 @@
     font-size: 24px;
     line-height: 32px;
 }
-hr {
-    height: 2px;
-    background-color: #c4bfbf; border: none;
+#header-label .instructions {
+    margin-top: 32px;
+    text-align: left;
+
+    color: #524e4e;
+    font-size: 18px; letter-spacing: 1px;
+    font-style: italic;
 }
+hr { height: 2px; background-color: #c4bfbf; border: none; }
 /* TOGGLE ---------------------------------------------------------------------------- */
 .subtitle-container {
     position: relative;
@@ -57,7 +62,10 @@ hr {
     background-color: #171a1f;
     color: #e4e3e2;
 }
-
+/* INPUT ------------------------------------------------------------------------------- */
+.grade-input::-webkit-inner-spin-button,
+.grade-input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.grade-input                            { -moz-appearance: textfield; appearance: textfield; }
 /* NEXT ------------------------------------------------------------------------------- */
 .next-btn {
     display: inline-block; align-self: center;

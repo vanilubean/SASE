@@ -23,7 +23,3 @@
     src: url('/assets/fonts/ssp/SSP-Semibold.ttf'       ) format('truetype'); }
 @font-face { font-family: 'SSP-Black';
     src: url('/assets/fonts/ssp/SSP-Black.ttf'          ) format('truetype'); }
-
-h1 {
-    color: red;
-}
