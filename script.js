@@ -356,7 +356,7 @@ async function initResultsPage() {
     
     const predictAgainBtn = document.getElementById('predict-again');
     if (predictAgainBtn) {
-        predictAgainBtn.addEventListener('click', () => window.location.href = '../index.html');
+        predictAgainBtn.addEventListener('click', () => window.location.href = '/SASE/index.html');
     }
 }
 // INITIALIZE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
