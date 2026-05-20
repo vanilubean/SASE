@@ -356,7 +356,10 @@ async function initResultsPage() {
     
     const predictAgainBtn = document.getElementById('predict-again');
     if (predictAgainBtn) {
-        predictAgainBtn.addEventListener('click', () => window.location.href = '/SASE/index.html');
+        // Remove any existing event listeners to prevent conflicts
+        const newBtn = predictAgainBtn.cloneNode(true);
+        predictAgainBtn.parentNode.replaceChild(newBtn, predictAgainBtn);
+        newBtn.addEventListener('click', () => window.location.href = '/SASE/index.html');
     }
 }
 // INITIALIZE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
