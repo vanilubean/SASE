@@ -3,19 +3,27 @@
   "math": {
     "features": [
       "General Mathematics",
+      "General Physics 1",
+      "General Physics 2",
       "Statistics and Probability",
       "Basic Calculus",
       "Pre Calculus",
-      "Business Math"
+      "Business Math",
+      "Fundamentals of ABM 1",
+      "Fundamentals of ABM 2"
     ],
     "adjustments": [
       0.0,
-      0.0019999999999999575,
       0.0,
       0.0,
-      -0.12599999999999997
+      0.008000000000000007,
+      0.0,
+      0.0,
+      -0.08399999999999999,
+      0.12400000000000003,
+      -0.003999999999999915
     ],
-    "baseline": 11.14,
+    "baseline": 9.52,
     "max_score": 40
   },
   "language": {
@@ -24,18 +32,26 @@
       "Oral Communication in Context",
       "Reading and Writing Skills",
       "English for Academic Purposes",
+      "Empowerment Technologies",
+      "Media and Information Literacy",
+      "Practical Research 1",
+      "Practical Research 2",
       "Creative Writing",
       "Creative Non Fiction"
     ],
     "adjustments": [
-      -0.5519999999999996,
-      0.1480000000000004,
+      -0.2,
+      0.1280000000000001,
       0.0,
-      0.05200000000000031,
+      0.048000000000000397,
+      -0.23199999999999932,
+      -0.01599999999999966,
+      -0.011999999999999744,
+      0.012000000000000455,
       0.0,
       0.0
     ],
-    "baseline": 48.8,
+    "baseline": 48.16,
     "max_score": 80
   },
   "science": {
@@ -68,23 +84,27 @@
       "Practical Research 2",
       "Empowerment Technologies",
       "Media and Information Literacy",
+      "Fundamentals of ABM 1",
+      "Fundamentals of ABM 2",
       "Trends, Networks, and Critical Thinking in the 21st Century"
     ],
     "adjustments": [
+      -0.0060000000000000496,
+      0.03199999999999985,
+      0.0379999999999999,
+      0.03599999999999994,
+      0.008000000000000007,
       0.0,
-      0.05,
-      0.07600000000000015,
-      0.04600000000000008,
       0.0
     ],
-    "baseline": 13.04,
+    "baseline": 13.22,
     "max_score": 30
   },
   "trained_on": 5,
   "r2_scores": {
-    "math": 0.7437234042553189,
-    "language": 0.7418076923076925,
+    "math": 0.7463404255319148,
+    "language": 0.7699743589743588,
     "science": 0.7200000000000002,
-    "aptitude": 0.7779333333333331
+    "aptitude": 0.7848666666666664
   }
 }

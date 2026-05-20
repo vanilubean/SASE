@@ -3,19 +3,27 @@
   "math": {
     "features": [
       "General Mathematics",
+      "General Physics 1",
+      "General Physics 2",
       "Statistics and Probability",
       "Basic Calculus",
       "Pre Calculus",
-      "Business Math"
+      "Business Math",
+      "Fundamentals of ABM 1",
+      "Fundamentals of ABM 2"
     ],
     "adjustments": [
-      0.15400000000000008,
-      0.5199999999999999,
-      0.41999999999999993,
-      0.011999999999999922,
+      0.092,
+      0.24799999999999986,
+      0.05999999999999996,
+      0.16399999999999987,
+      0.11199999999999992,
+      0.013999999999999879,
+      0.0,
+      0.0,
       0.0
     ],
-    "baseline": 10.42,
+    "baseline": 12.96,
     "max_score": 40
   },
   "language": {
@@ -24,18 +32,26 @@
       "Oral Communication in Context",
       "Reading and Writing Skills",
       "English for Academic Purposes",
+      "Empowerment Technologies",
+      "Media and Information Literacy",
+      "Practical Research 1",
+      "Practical Research 2",
       "Creative Writing",
       "Creative Non Fiction"
     ],
     "adjustments": [
-      -0.18999999999999986,
-      0.24600000000000008,
-      -0.11200000000000046,
-      0.16199999999999976,
+      -0.07199999999999988,
+      -0.0759999999999998,
+      -0.039999999999999855,
+      0.07800000000000011,
+      0.3979999999999997,
+      0.05600000000000023,
+      0.3420000000000002,
+      -0.060000000000000143,
       0.0,
       0.0
     ],
-    "baseline": 54.92,
+    "baseline": 51.28,
     "max_score": 80
   },
   "science": {
@@ -68,23 +84,27 @@
       "Practical Research 2",
       "Empowerment Technologies",
       "Media and Information Literacy",
+      "Fundamentals of ABM 1",
+      "Fundamentals of ABM 2",
       "Trends, Networks, and Critical Thinking in the 21st Century"
     ],
     "adjustments": [
-      0.3200000000000001,
-      0.1120000000000001,
-      0.15400000000000008,
-      -0.352,
+      0.27000000000000013,
+      0.18800000000000008,
+      0.2660000000000002,
+      -0.27599999999999997,
+      0.0,
+      0.0,
       0.0
     ],
-    "baseline": 14.62,
+    "baseline": 13.94,
     "max_score": 30
   },
   "trained_on": 11,
   "r2_scores": {
-    "math": 0.9110483443708609,
-    "language": 0.7532346964064436,
+    "math": 0.9064350993377484,
+    "language": 0.7414213961173068,
     "science": 0.9444790322580645,
-    "aptitude": 0.8646766509433963
+    "aptitude": 0.8452346698113208
   }
 }
