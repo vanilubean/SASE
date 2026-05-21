@@ -20,6 +20,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "paso, maida",tvl,female,Oral Communication in Context,88,Language,18,35,11,6,70
 "paso, maida",tvl,female,Reading and Writing Skills,86,Language,18,35,11,6,70
 "paso, maida",tvl,female,Statistics and Probability,90,Mathematics,18,35,11,6,70
+"paso, maida",tvl,female,General Mathematics,87,Mathematics,18,35,11,6,70
 "paso, maida",tvl,female,Earth and Life Science,94,Science,18,35,11,6,70
 "paso, maida",tvl,female,Physical Science,91,Science,18,35,11,6,70
 "beifong, toph",tvl,female,Empowerment Technologies,91,"Aptitude, Language",14,52,9,13,88
@@ -62,6 +63,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "bezoz, jeff",abm,male,Oral Communication in Context,97,Language,13,52,9,13,87
 "bezoz, jeff",abm,male,Business Finance,96,Mathematics,13,52,9,13,87
 "bezoz, jeff",abm,male,Business Math,93,Mathematics,13,52,9,13,87
+"bezoz, jeff",abm,male,General Mathematics,94,Mathematics,13,52,9,13,87
 "bezoz, jeff",abm,male,Statistics and Probability,87,Mathematics,13,52,9,13,87
 "bezoz, jeff",abm,male,Fundamentals of ABM 1,93,"Mathematics, Aptitude",13,52,9,13,87
 "bezoz, jeff",abm,male,Fundamentals of ABM 2,95,"Mathematics, Aptitude",13,52,9,13,87
@@ -97,6 +99,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "blake, daphne",humss,female,English for Academic Purposes,96,Language,17,60,9,11,97
 "blake, daphne",humss,female,Oral Communication in Context,96,Language,17,60,9,11,97
 "blake, daphne",humss,female,Reading and Writing Skills,95,Language,17,60,9,11,97
+"blake, daphne",humss,female,General Mathematics,82,Mathematics,17,60,9,11,97
 "blake, daphne",humss,female,Statistics and Probability,80,Mathematics,17,60,9,11,97
 "blake, daphne",humss,female,Earth and Life Science,90,Science,17,60,9,11,97
 "butterfly, star",tvl,female,Empowerment Technologies,86,"Aptitude, Language",16,49,7,10,82
@@ -180,6 +183,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "kent, jovhan",humss,male,Oral Communication in Context,91,Language,7,57,10,18,92
 "kent, jovhan",humss,male,Reading and Writing Skills,93,Language,7,57,10,18,92
 "kent, jovhan",humss,male,Statistics and Probability,82,Mathematics,7,57,10,18,92
+"kent, jovhan",humss,male,General Mathematics,82,Mathematics,7,57,10,18,92
 "kent, jovhan",humss,male,Earth and Life Science,90,Science,7,57,10,18,92
 "explorer, dora",humss,female,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,16,57,10,13,96
 "explorer, dora",humss,female,Empowerment Technologies,91,"Aptitude, Language",16,57,10,13,96
@@ -192,6 +196,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "explorer, dora",humss,female,English for Academic Purposes,96,Language,16,57,10,13,96
 "explorer, dora",humss,female,Oral Communication in Context,95,Language,16,57,10,13,96
 "explorer, dora",humss,female,Reading and Writing Skills,95,Language,16,57,10,13,96
+"explorer, dora",humss,female,General Mathematics,89,Mathematics,16,57,10,13,96
 "explorer, dora",humss,female,Statistics and Probability,86,Mathematics,16,57,10,13,96
 "explorer, dora",humss,female,Earth and Life Science,90,Science,16,57,10,13,96
 "fazbear, freddy",humss,male,"Trends, Networks, and Critical Thinking in the 21st Century",93,Aptitude,19,59,10,12,100
@@ -206,6 +211,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "fazbear, freddy",humss,male,Oral Communication in Context,97,Language,19,59,10,12,100
 "fazbear, freddy",humss,male,Reading and Writing Skills,95,Language,19,59,10,12,100
 "fazbear, freddy",humss,male,Statistics and Probability,86,Mathematics,19,59,10,12,100
+"fazbear, freddy",humss,male,General Mathematics,89,Mathematics,19,59,10,12,100
 "fazbear, freddy",humss,male,Earth and Life Science,91,Science,19,59,10,12,100
 "forger, anya",stem,female,Empowerment Technologies,86,"Aptitude, Language",9,46,8,16,79
 "forger, anya",stem,female,Media and Information Literacy,95,"Aptitude, Language",9,46,8,16,79
@@ -253,6 +259,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "hatsune, miku",abm,female,Business Finance,90,Mathematics,13,42,11,15,81
 "hatsune, miku",abm,female,Business Math,90,Mathematics,13,42,11,15,81
 "hatsune, miku",abm,female,Statistics and Probability,87,Mathematics,13,42,11,15,81
+"hatsune, miku",abm,female,General Mathematics,90,Mathematics,13,42,11,15,81
 "hatsune, miku",abm,female,Fundamentals of ABM 1,95,"Mathematics, Aptitude",13,42,11,15,81
 "hatsune, miku",abm,female,Fundamentals of ABM 2,93,"Mathematics, Aptitude",13,42,11,15,81
 "hatsune, miku",abm,female,Earth and Life Science,91,Science,13,42,11,15,81
@@ -268,6 +275,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "june, isabella",humss,female,Oral Communication in Context,79,Language,19,46,11,9,85
 "june, isabella",humss,female,Reading and Writing Skills,80,Language,19,46,11,9,85
 "june, isabella",humss,female,Statistics and Probability,83,Mathematics,19,46,11,9,85
+"june, isabella",humss,female,General Mathematics,87,Mathematics,19,46,11,9,85
 "june, isabella",humss,female,Earth and Life Science,81,Science,19,46,11,9,85
 "june, isabella",humss,female,Physical Science,86,Science,19,46,11,9,85
 "ketchum, ash",abm,male,Empowerment Technologies,92,"Aptitude, Language",14,54,12,13,93
@@ -280,6 +288,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "ketchum, ash",abm,male,Business Finance,88,Mathematics,14,54,12,13,93
 "ketchum, ash",abm,male,Business Math,87,Mathematics,14,54,12,13,93
 "ketchum, ash",abm,male,Statistics and Probability,88,Mathematics,14,54,12,13,93
+"ketchum, ash",abm,male,General Mathematics,89,Mathematics,14,54,12,13,93
 "ketchum, ash",abm,male,Fundamentals of ABM 1,89,"Mathematics, Aptitude",14,54,12,13,93
 "ketchum, ash",abm,male,Fundamentals of ABM 2,90,"Mathematics, Aptitude",14,54,12,13,93
 "ketchum, ash",abm,male,Earth and Life Science,91,Science,14,54,12,13,93
@@ -324,6 +333,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "musa, nadj",tvl,female,Oral Communication in Context,84,Language,9,46,10,8,73
 "musa, nadj",tvl,female,Reading and Writing Skills,87,Language,9,46,10,8,73
 "musa, nadj",tvl,female,Statistics and Probability,86,Mathematics,9,46,10,8,73
+"musa, nadj",tvl,female,General Mathematics,87,Mathematics,9,46,10,8,73
 "musa, nadj",tvl,female,Earth and Life Science,68,Science,9,46,10,8,73
 "musa, nadj",tvl,female,Physical Science,89,Science,9,46,10,8,73
 "newton, isaac",stem,male,Empowerment Technologies,90,"Aptitude, Language",12,55,17,20,104
@@ -376,6 +386,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "poe, edgar",humss,male,Oral Communication in Context,96,Language,13,64,9,10,96
 "poe, edgar",humss,male,Reading and Writing Skills,97,Language,13,64,9,10,96
 "poe, edgar",humss,male,Statistics and Probability,87,Mathematics,13,64,9,10,96
+"poe, edgar",humss,male,General Mathematics,90,Mathematics,13,64,9,10,96
 "poe, edgar",humss,male,Earth and Life Science,88,Science,13,64,9,10,96
 "billie, jean",abm,female,Empowerment Technologies,94,"Aptitude, Language",17,42,12,9,80
 "billie, jean",abm,female,Media and Information Literacy,94,"Aptitude, Language",17,42,12,9,80
@@ -387,6 +398,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "billie, jean",abm,female,Business Finance,94,Mathematics,17,42,12,9,80
 "billie, jean",abm,female,Business Math,95,Mathematics,17,42,12,9,80
 "billie, jean",abm,female,Statistics and Probability,94,Mathematics,17,42,12,9,80
+"billie, jean",abm,female,General Mathematics,96,Mathematics,17,42,12,9,80
 "billie, jean",abm,female,Fundamentals of ABM 1,96,"Mathematics, Aptitude",17,42,12,9,80
 "billie, jean",abm,female,Fundamentals of ABM 2,91,"Mathematics, Aptitude",17,42,12,9,80
 "billie, jean",abm,female,Earth and Life Science,88,Science,17,42,12,9,80
@@ -415,20 +427,22 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "squarepants, spongebob",humss,male,Oral Communication in Context,91,Language,16,35,10,14,75
 "squarepants, spongebob",humss,male,Reading and Writing Skills,93,Language,16,35,10,14,75
 "squarepants, spongebob",humss,male,Statistics and Probability,80,Mathematics,16,35,10,14,75
+"squarepants, spongebob",humss,male,General Mathematics,81,Mathematics,16,35,10,14,75
 "squarepants, spongebob",humss,male,Earth and Life Science,87,Science,16,35,10,14,75
-"star, patrick",humss,male,"Trends, Networks, and Critical Thinking in the 21st Century",78,Aptitude,4,20,5,9,38
-"star, patrick",humss,male,Empowerment Technologies,78,"Aptitude, Language",4,20,3,9,36
-"star, patrick",humss,male,Media and Information Literacy,81,"Aptitude, Language",4,20,3,9,36
-"star, patrick",humss,male,Practical Research 1,89,"Aptitude, Language",4,20,3,9,36
-"star, patrick",humss,male,Practical Research 2,86,"Aptitude, Language",4,20,3,9,36
-"star, patrick",humss,male,21st Century Literature from the Philippines and the World,79,Language,4,20,3,9,36
-"star, patrick",humss,male,Creative Non Fiction,92,Language,4,20,3,9,36
-"star, patrick",humss,male,Creative Writing,93,Language,4,20,3,9,36
-"star, patrick",humss,male,English for Academic Purposes,82,Language,4,20,3,9,36
-"star, patrick",humss,male,Oral Communication in Context,90,Language,4,20,3,9,36
-"star, patrick",humss,male,Reading and Writing Skills,77,Language,4,20,3,9,36
-"star, patrick",humss,male,Statistics and Probability,75,Mathematics,4,20,3,9,36
-"star, patrick",humss,male,Earth and Life Science,80,Science,4,20,3,9,36
+"star, patrick",humss,male,"Trends, Networks, and Critical Thinking in the 21st Century",78,Aptitude,9,20,8,10,38
+"star, patrick",humss,male,Empowerment Technologies,78,"Aptitude, Language",9,20,8,10,38
+"star, patrick",humss,male,Media and Information Literacy,81,"Aptitude, Language",9,20,8,10,38
+"star, patrick",humss,male,Practical Research 1,89,"Aptitude, Language",9,20,8,10,38
+"star, patrick",humss,male,Practical Research 2,86,"Aptitude, Language",9,20,8,10,38
+"star, patrick",humss,male,21st Century Literature from the Philippines and the World,79,Language,9,20,8,10,38
+"star, patrick",humss,male,Creative Non Fiction,92,Language,9,20,8,10,38
+"star, patrick",humss,male,Creative Writing,93,Language,9,20,8,10,38
+"star, patrick",humss,male,English for Academic Purposes,82,Language,9,20,8,10,38
+"star, patrick",humss,male,Oral Communication in Context,90,Language,9,20,8,10,38
+"star, patrick",humss,male,Reading and Writing Skills,77,Language,9,20,8,10,38
+"star, patrick",humss,male,Statistics and Probability,75,Mathematics,9,20,8,10,38
+"star, patrick",humss,male,General Mathematics,76,Mathematics,9,20,8,10,38
+"star, patrick",humss,male,Earth and Life Science,80,Science,9,20,8,10,38
 "swift, taylor",humss,female,"Trends, Networks, and Critical Thinking in the 21st Century",91,Aptitude,15,72,17,17,121
 "swift, taylor",humss,female,Empowerment Technologies,91,"Aptitude, Language",15,72,17,17,121
 "swift, taylor",humss,female,Media and Information Literacy,97,"Aptitude, Language",15,72,17,17,121
@@ -440,6 +454,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "swift, taylor",humss,female,Oral Communication in Context,95,Language,15,72,17,17,121
 "swift, taylor",humss,female,Reading and Writing Skills,97,Language,15,72,17,17,121
 "swift, taylor",humss,female,Statistics and Probability,94,Mathematics,15,72,17,17,121
+"swift, taylor",humss,female,General Mathematics,97,Mathematics,15,72,17,17,121
 "swift, taylor",humss,female,21st Century Literature from the Philippines and the World,95,Language,15,72,17,17,121
 "swift, taylor",humss,female,Earth and Life Science,93,Science,15,72,17,17,121
 "star, twinkle",abm,female,Empowerment Technologies,92,"Aptitude, Language",13,46,7,17,83
@@ -452,6 +467,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "star, twinkle",abm,female,Business Finance,79,Mathematics,13,46,7,17,83
 "star, twinkle",abm,female,Business Math,93,Mathematics,13,46,7,17,83
 "star, twinkle",abm,female,Statistics and Probability,90,Mathematics,13,46,7,17,83
+"star, twinkle",abm,female,General Mathematics,92,Mathematics,13,46,7,17,83
 "star, twinkle",abm,female,Fundamentals of ABM 1,87,"Mathematics, Aptitude",13,46,7,17,83
 "star, twinkle",abm,female,Fundamentals of ABM 2,82,"Mathematics, Aptitude",13,46,7,17,83
 "star, twinkle",abm,female,Earth and Life Science,82,Science,13,46,7,17,83
@@ -486,7 +502,8 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "ceasar, julius",humss,male,English for Academic Purposes,96,Language,18,50,13,12,93
 "ceasar, julius",humss,male,Oral Communication in Context,99,Language,18,50,13,12,93
 "ceasar, julius",humss,male,Reading and Writing Skills,97,Language,18,50,13,12,93
-"ceasar, julius",humss,male,Statistics and Probability,80,Mathematics,18,50,13,12,93
+"ceasar, julius",humss,male,Statistics and Probability,84,Mathematics,18,50,13,12,93
+"ceasar, julius",humss,male,General Mathematics,89,Mathematics,18,50,13,12,93
 "ramsay, gordon",tvl,male,Empowerment Technologies,96,"Aptitude, Language",18,54,11,16,99
 "ramsay, gordon",tvl,male,Media and Information Literacy,94,"Aptitude, Language",18,54,11,16,99
 "ramsay, gordon",tvl,male,Practical Research 1,94,"Aptitude, Language",18,54,11,16,99
@@ -528,6 +545,7 @@ STUDENT_NAME,STRAND,GENDER,SUBJECT,GRADE,SUBJECT_CATEGORY,SASE_APTITUDE,SASE_LAN
 "jackson, michael",abm,male,Business Finance,94,Mathematics,12,56,12,11,91
 "jackson, michael",abm,male,Business Math,95,Mathematics,12,56,12,11,91
 "jackson, michael",abm,male,Statistics and Probability,94,Mathematics,12,56,12,11,91
+"jackson, michael",abm,male,General Mathematics,94,Mathematics,12,56,12,11,91
 "jackson, michael",abm,male,Fundamentals of ABM 1,96,"Mathematics, Aptitude",12,56,12,11,91
 "jackson, michael",abm,male,Fundamentals of ABM 2,91,"Mathematics, Aptitude",12,56,12,11,91
 "jackson, michael",abm,male,Earth and Life Science,88,Science,12,56,12,11,91
