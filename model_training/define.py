@@ -52,7 +52,7 @@ aptitude_subjects = [
     'Trends, Networks, and Critical Thinking in the 21st Century'
 ]
 
-print("✅ Subject lists defined")
+print("Subject lists defined")
 print(f"Math subjects: {math_subjects}")
 print(f"Language subjects: {lang_subjects}")
 print(f"Science subjects: {science_subjects}")
