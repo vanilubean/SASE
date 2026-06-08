@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // PERSONALIZED ADVICE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function generateAdvice(scores, subjectGrades) {
-    // Create array of SASE sections with their scores
+    // Create array of SASE sections with their scores and max scores
     const saseSections = [
         { name: 'Math', score: scores.math, maxScore: 40, icon: '',
           highThreshold: 30, lowThreshold: 10,
@@ -400,7 +400,10 @@ function generateAdvice(scores, subjectGrades) {
         (section.score < min.score) ? section : min, saseSections[0]);
     
     let html = '';
-    // STRONGEST & WEAKEST //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    // ============================================
+    // ROW 1: STRONGEST & WEAKEST AREAS
+    // ============================================
     html += `<div class="feedback-row">`;
     
     // Strongest card
@@ -417,8 +420,7 @@ function generateAdvice(scores, subjectGrades) {
             <div class="feedback-card-score">${weakest.name}: ${weakest.score}/${weakest.maxScore}</div>
             <div class="feedback-card-message">${weakest.lowMessage}</div>
         </div>`;
-    }
-    else {
+    } else {
         // Show second strongest if no weak area
         let secondStrongest = saseSections.filter(s => s.name !== strongest.name)
             .reduce((max, s) => (s.score > max.score) ? s : max, saseSections[1]);
@@ -431,36 +433,56 @@ function generateAdvice(scores, subjectGrades) {
     
     html += `</div>`;
     
-    // COMPARISON AND TIPS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ============================================
+    // ROW 2: TWO-COLUMN LAYOUT (Median Comparison + Tips)
+    // ============================================
     html += `<div class="feedback-two-col">`;
     
-    // LEFT COLUMN: comparison to average
+    // LEFT COLUMN: Comparison to Median (Half of Max Score)
     html += `<div class="feedback-col">
-        <div class="feedback-col-title">COMPARED TO AVERAGE</div>`;
+        <div class="feedback-col-title">COMPARED TO MEDIAN</div>`;
     
-    const avgScores = { math: 14, language: 52, science: 13, aptitude: 14 };
+    // Calculate total median (half of 180 = 90)
+    const totalMaxScore = 180;
+    const totalMedian = totalMaxScore / 2;  // 90
+    const totalDiff = scores.math + scores.language + scores.science + scores.aptitude - totalMedian;
     
+    let totalStatusClass = 'average';
+    let totalStatusText = '';
+    
+    if (totalDiff > 0) {
+        totalStatusClass = 'above';
+        totalStatusText = `+${totalDiff} above median (${totalMedian})`;
+    } else if (totalDiff < 0) {
+        totalStatusClass = 'below';
+        totalStatusText = `${totalDiff} below median (${totalMedian})`;
+    } else {
+        totalStatusText = `Exactly at median (${totalMedian})`;
+    }
+    
+    html += `<div class="comparison-item total-comparison ${totalStatusClass}">
+        <span>TOTAL SCORE</span>
+        <span>${totalStatusText}</span>
+    </div>`;
+    
+    // Add a divider
+    html += `<div class="comparison-divider"></div>`;
+    
+    // Individual section comparisons to their medians
     for (const section of saseSections) {
-        const sectionKey = section.name.toLowerCase();
-        const avg = avgScores[sectionKey];
-        const diff = section.score - avg;
+        const median = section.maxScore / 2;  // Half of the max score
+        const diff = section.score - median;
         let statusClass = 'average';
-        let statusText = 'At average level';
-        let arrow = '';
+        let statusText = '';
         
-        if (diff > 5) {
+        if (diff > 0) {
             statusClass = 'above';
-            statusText = `+${diff} above average`;
-            arrow = '';
-        }
-        else if (diff < -5) {
+            statusText = `+${diff} above median (${median})`;
+        } else if (diff < 0) {
             statusClass = 'below';
-            statusText = `${diff} below average`;
-            arrow = '';
-        }
-        else {
-            statusText = 'At average level';
-            arrow = '';
+            statusText = `${diff} below median (${median})`;
+        } else {
+            statusText = `At median (${median})`;
         }
         
         html += `<div class="comparison-item ${statusClass}">
@@ -469,13 +491,13 @@ function generateAdvice(scores, subjectGrades) {
         </div>`;
     }
     
-    html += `</div>`;
+    html += `</div>`; // Close left column
     
-    // RIGHT COLUMN: study tips
+    // RIGHT COLUMN: Study Tips
     html += `<div class="feedback-col">
         <div class="feedback-col-title">RECOMMENDED FOCUS</div>`;
     
-    // tips based on weakest area
+    // Tips based on weakest area
     let tips = [];
     if (weakest.name === 'Math') {
         tips = [
@@ -483,22 +505,19 @@ function generateAdvice(scores, subjectGrades) {
             'Practice word problems and mental math exercises',
             'Use Khan Academy for targeted practice'
         ];
-    } 
-    else if (weakest.name === 'Language') {
+    } else if (weakest.name === 'Language') {
         tips = [
             'Read at least 30 minutes daily to build vocabulary',
             'Practice summarizing paragraphs in your own words',
             'Take practice reading comprehension tests'
         ];
-    }
-    else if (weakest.name === 'Science') {
+    } else if (weakest.name === 'Science') {
         tips = [
             'Create flashcards for scientific terms and concepts',
             'Watch educational videos on basic science topics',
             'Practice interpreting graphs and data tables'
         ];
-    }
-    else {
+    } else {
         tips = [
             'Solve logic puzzles (Sudoku, grid puzzles) weekly',
             'Practice pattern recognition and sequence completion',
@@ -520,5 +539,6 @@ function generateAdvice(scores, subjectGrades) {
     
     html += `</div>`; // Close right column
     html += `</div>`; // Close feedback-two-col
+    
     return html;
 }
