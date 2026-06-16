@@ -292,17 +292,19 @@ function predictWithAI(subjectType, grades) {
 async function initResultsPage() {
     if (!document.getElementById('score-display')) return;
     
-    console.log('📊 Initializing results page...');
+    console.log('Initializing results page...');
     await loadAIModel();
     
+    // get saved grades from local storage
     const savedGrades = JSON.parse(localStorage.getItem('studentGrades') || '{}');
-    console.log('📚 Loaded grades:', savedGrades);
+    console.log('Loaded grades:', savedGrades);
     
+    // PREDICT WITH AI
     const scores = {
-        math: predictWithAI('math', savedGrades),
-        language: predictWithAI('language', savedGrades),
-        science: predictWithAI('science', savedGrades),
-        aptitude: predictWithAI('aptitude', savedGrades)
+        math:       predictWithAI('math',       savedGrades), 
+        language:   predictWithAI('language',   savedGrades),
+        science:    predictWithAI('science',    savedGrades),
+        aptitude:   predictWithAI('aptitude',   savedGrades)
     };
     
     const totalScore = scores.math + scores.language + scores.science + scores.aptitude;
@@ -321,11 +323,11 @@ async function initResultsPage() {
         }
     }
     
-    const mathScore = document.getElementById('math-score');
-    const englishScore = document.getElementById('english-score');
-    const scienceScore = document.getElementById('science-score');
+    const mathScore     = document.getElementById('math-score');
+    const englishScore  = document.getElementById('english-score');
+    const scienceScore  = document.getElementById('science-score');
     const aptitudeScore = document.getElementById('aptitude-score');
-    const scoreDisplay = document.getElementById('score-display');
+    const scoreDisplay  = document.getElementById('score-display');
     
     const duration = 2500;
     const startTime = performance.now();
@@ -333,15 +335,15 @@ async function initResultsPage() {
     function easeOutQuart(x) { return 1 - Math.pow(1 - x, 4); }
     
     function animateScores(currentTime) {
-        const elapsedTime = currentTime - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
+        const elapsedTime   = currentTime - startTime;
+        const progress      = Math.min(elapsedTime / duration, 1);
         const easedProgress = easeOutQuart(progress);
         
-        mathScore.textContent = `${Math.round(scores.math * easedProgress)} / 40`;
-        englishScore.textContent = `${Math.round(scores.language * easedProgress)} / 80`;
-        scienceScore.textContent = `${Math.round(scores.science * easedProgress)} / 30`;
-        aptitudeScore.textContent = `${Math.round(scores.aptitude * easedProgress)} / 30`;
-        scoreDisplay.textContent = `${Math.round(totalScore * easedProgress)} / 180`;
+        mathScore.textContent       = `${Math.round(scores.math * easedProgress)} / 40`;
+        englishScore.textContent    = `${Math.round(scores.language * easedProgress)} / 80`;
+        scienceScore.textContent    = `${Math.round(scores.science * easedProgress)} / 30`;
+        aptitudeScore.textContent   = `${Math.round(scores.aptitude * easedProgress)} / 30`;
+        scoreDisplay.textContent    = `${Math.round(totalScore * easedProgress)} / 180`;
         
         if (progress < 1) requestAnimationFrame(animateScores);
     }
@@ -364,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.toggle-btn')) {
         initToggleButtons();
         initNextButton();
-        initGradeValidation();  // ← Added this
+        initGradeValidation();
     }
     
     if (document.getElementById('score-display')) {
