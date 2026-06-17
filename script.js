@@ -246,14 +246,14 @@ let aiLoaded = false;
 
 async function loadAIModel() {
     try {
-        console.log(`🔄 Loading AI model...`);
+        console.log(`Loading AI model...`);
         const response = await fetch(`sase_model.json?v=${Date.now()}`);
         
         if (!response.ok) throw new Error('File not found');
         
         saseAI = await response.json();
         aiLoaded = true;
-        console.log(`✅ AI Model loaded! Trained on ${saseAI.trained_on} students`);
+        console.log(`AI Model loaded! Trained on ${saseAI.trained_on} students`);
         console.log(`   Math R²: ${saseAI.r2_scores.math}`);
         console.log(`   Language R²: ${saseAI.r2_scores.language}`);
         console.log(`   Science R²: ${saseAI.r2_scores.science}`);
@@ -261,7 +261,7 @@ async function loadAIModel() {
         
         return true;
     } catch (error) {
-        console.log('⚠️ AI model not found, using rule-based');
+        console.log('AI model not found, using rule-based');
         aiLoaded = false;
         return false;
     }
