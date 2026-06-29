@@ -179,8 +179,9 @@ function saveAllGrades() {
         else if (titleText.includes('HUMSS')) strand = 'HUMSS';
     }
     
+    // grades get saved to local storage
     localStorage.setItem('studentGrades', JSON.stringify(grades));
-    localStorage.setItem('studentStrand', strand);
+    localStorage.setItem('studentStrand', strand); // save strand
     
     console.log('Saved grades:', grades);
     console.log('Strand:', strand);
@@ -241,49 +242,58 @@ function predictFallback(subjectType, grades) {
     return 12;
 }
 // AI MODEL /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-let saseAI = null;
+let saseAI = null;      // stores the entire AI model loded from sase_model.json
 let aiLoaded = false;
 
+// PREDICTION /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 async function loadAIModel() {
     try {
         console.log(`Loading AI model...`);
-        const response = await fetch(`sase_model.json?v=${Date.now()}`);
-        
+        const response = await fetch(`sase_model.json?v=${Date.now()}`); // fetch ai model file
         if (!response.ok) throw new Error('File not found');
         
+        // oarse file into a javascript obbject
         saseAI = await response.json();
         aiLoaded = true;
-        console.log(`AI Model loaded! Trained on ${saseAI.trained_on} students`);
-        console.log(`   Math R²: ${saseAI.r2_scores.math}`);
-        console.log(`   Language R²: ${saseAI.r2_scores.language}`);
-        console.log(`   Science R²: ${saseAI.r2_scores.science}`);
-        console.log(`   Aptitude R²: ${saseAI.r2_scores.aptitude}`);
+
+        // confirm if model loaded successfuly
+        console.log(`   AI Model loaded! Trained on ${saseAI.trained_on} students`);
+
+        console.log(`   Math R²:        ${saseAI.r2_scores.math}`);
+        console.log(`   Language R²:    ${saseAI.r2_scores.language}`);
+        console.log(`   Science R²:     ${saseAI.r2_scores.science}`);
+        console.log(`   Aptitude R²:    ${saseAI.r2_scores.aptitude}`);
         
         return true;
-    } catch (error) {
+    }
+    // incase AI is not available
+    catch (error) {
         console.log('AI model not found, using rule-based');
         aiLoaded = false;
         return false;
     }
 }
+
+// forumla : prediction = baseline + Σ((grade - 85) × adjustment)
+
 function predictWithAI(subjectType, grades) {
-    if (!saseAI) return predictFallback(subjectType, grades);
+    if (!saseAI)    return predictFallback(subjectType, grades);    // if ai fails to load
     
-    const model = saseAI[subjectType];
-    if (!model) return predictFallback(subjectType, grades);
+    const model = saseAI[subjectType];                              // get specific model for this subject
+    if (!model)     return predictFallback(subjectType, grades);    // check if model exists
     
-    let prediction = model.baseline;
+    let prediction = model.baseline;                                // start with the baseline
     
-    for (let i = 0; i < model.features.length; i++) {
-        const subject = model.features[i];
-        const grade = grades[subject] || 85;
-        const adjustment = model.adjustments ? model.adjustments[i] : model.importance[i] * 0.5;
+    for (let i = 0; i <       model.features.length; i++) {
+        const subject       = model.features[i];
+        const grade         = grades[subject] || 85;
+        const adjustment    = model.adjustments ? model.adjustments[i] : model.importance[i] * 0.5;
         prediction += (grade - 85) * adjustment;
     }
     
     let maxScore = 40;
     if (subjectType === 'language') maxScore = 80;
-    if (subjectType === 'science') maxScore = 30;
+    if (subjectType ===  'science') maxScore = 30;
     if (subjectType === 'aptitude') maxScore = 30;
     
     return Math.min(maxScore, Math.max(0, Math.round(prediction)));
@@ -293,13 +303,13 @@ async function initResultsPage() {
     if (!document.getElementById('score-display')) return;
     
     console.log('Initializing results page...');
-    await loadAIModel();
+    await loadAIModel(); // load ai model
     
     // get saved grades from local storage
     const savedGrades = JSON.parse(localStorage.getItem('studentGrades') || '{}');
     console.log('Loaded grades:', savedGrades);
     
-    // PREDICT WITH AI
+    // predict scores using ai
     const scores = {
         math:       predictWithAI('math',       savedGrades), 
         language:   predictWithAI('language',   savedGrades),
@@ -307,9 +317,11 @@ async function initResultsPage() {
         aptitude:   predictWithAI('aptitude',   savedGrades)
     };
     
+    // TOTAL SASE SCORE
     const totalScore = scores.math + scores.language + scores.science + scores.aptitude;
     console.log('Final AI Scores:', scores);
     
+    // display AI status
     const aiStatusElem = document.getElementById('aiStatus');
     if (aiStatusElem) {
         if (aiLoaded && saseAI) {
@@ -323,6 +335,7 @@ async function initResultsPage() {
         }
     }
     
+    // get DOM elements for displaying scores
     const mathScore     = document.getElementById('math-score');
     const englishScore  = document.getElementById('english-score');
     const scienceScore  = document.getElementById('science-score');
@@ -334,16 +347,17 @@ async function initResultsPage() {
     
     function easeOutQuart(x) { return 1 - Math.pow(1 - x, 4); }
     
+    // display animated predicted scores
     function animateScores(currentTime) {
         const elapsedTime   = currentTime - startTime;
         const progress      = Math.min(elapsedTime / duration, 1);
         const easedProgress = easeOutQuart(progress);
         
-        mathScore.textContent       = `${Math.round(scores.math * easedProgress)} / 40`;
+        mathScore.textContent       = `${Math.round(scores.math     * easedProgress)} / 40`;
         englishScore.textContent    = `${Math.round(scores.language * easedProgress)} / 80`;
-        scienceScore.textContent    = `${Math.round(scores.science * easedProgress)} / 30`;
+        scienceScore.textContent    = `${Math.round(scores.science  * easedProgress)} / 30`;
         aptitudeScore.textContent   = `${Math.round(scores.aptitude * easedProgress)} / 30`;
-        scoreDisplay.textContent    = `${Math.round(totalScore * easedProgress)} / 180`;
+        scoreDisplay.textContent    = `${Math.round(totalScore      * easedProgress)} / 180`;
         
         if (progress < 1) requestAnimationFrame(animateScores);
     }
@@ -403,9 +417,7 @@ function generateAdvice(scores, subjectGrades) {
     
     let html = '';
     
-    // ============================================
     // ROW 1: STRONGEST & WEAKEST AREAS
-    // ============================================
     html += `<div class="feedback-row">`;
     
     // Strongest card
@@ -435,9 +447,7 @@ function generateAdvice(scores, subjectGrades) {
     
     html += `</div>`;
     
-    // ============================================
     // ROW 2: TWO-COLUMN LAYOUT (Median Comparison + Tips)
-    // ============================================
     html += `<div class="feedback-two-col">`;
     
     // LEFT COLUMN: Comparison to Median (Half of Max Score)
